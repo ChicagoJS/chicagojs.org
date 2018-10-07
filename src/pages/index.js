@@ -9,9 +9,17 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Layout>
-        <h1>ChicagoJS.org</h1>
-      </Layout>
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          textAlign: "center",
+          marginTop: 40
+        }}
+      >
+        <h1>ChicagoJS Community</h1>
+        <span>Coming Soon</span>
+      </div>
     );
   }
 }

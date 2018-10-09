@@ -1,5 +1,7 @@
 # ChicagoJS.org
 
+![ChicagoJS Logo](https://res.cloudinary.com/chicagojs/image/upload/f_auto,c_scale,w_256/v1539092510/brand/logo-square-1200x1200.png)
+
 An inclusive, community-driven Javascript community in Chicago. See our [Code of Conduct](/CODE-OF-CONDUCT.md). Help us build the JS community you wish you had!
 
 

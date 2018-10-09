@@ -5,7 +5,7 @@ node_modules
 # Build directory
 public/
 static/admin/*.bundle.*
-yarn-error.log
+*.log
 
 # Editors
 /.idea

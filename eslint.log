@@ -1,0 +1,181 @@
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/gatsby-config.js
+   5:23  error  Delete `,`  prettier/prettier
+  14:22  error  Delete `,`  prettier/prettier
+  15:8   error  Delete `,`  prettier/prettier
+  21:23  error  Delete `,`  prettier/prettier
+  22:8   error  Delete `,`  prettier/prettier
+  29:20  error  Delete `,`  prettier/prettier
+  30:8   error  Delete `,`  prettier/prettier
+  35:50  error  Delete `,`  prettier/prettier
+  36:8   error  Delete `,`  prettier/prettier
+  38:28  error  Delete `,`  prettier/prettier
+  39:4   error  Delete `,`  prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/gatsby-node.js
+  29:18  error  Expected to return a value at the end of arrow function                                                                                                               consistent-return
+  38:13  error  Use object destructuring                                                                                                                                              prefer-destructuring
+  42:33  error  Replace `⏎··········`src/templates/${String(edge.node.frontmatter.templateKey)}.js`⏎········` with ``src/templates/${String(edge.node.frontmatter.templateKey)}.js``  prettier/prettier
+  47:13  error  Delete `,`                                                                                                                                                            prettier/prettier
+  48:10  error  Delete `,`                                                                                                                                                            prettier/prettier
+  71:14  error  Delete `,`                                                                                                                                                            prettier/prettier
+  72:10  error  Delete `,`                                                                                                                                                            prettier/prettier
+  86:12  error  Delete `,`                                                                                                                                                            prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/cms/preview-templates/AboutPagePreview.js
+   6:21  error  Replace `⏎····title={entry.getIn(['data',·'title'])}⏎····content={widgetFor('body')}⏎·` with `·title={entry.getIn(['data',·'title'])}·content={widgetFor('body')}`  prettier/prettier
+  13:3   error  propType "entry" is not required, but has no corresponding defaultProp declaration                                                                                  react/require-default-props
+  14:26  error  Delete `,`                                                                                                                                                          prettier/prettier
+  16:3   error  propType "widgetFor" is not required, but has no corresponding defaultProp declaration                                                                              react/require-default-props
+  16:28  error  Delete `,`                                                                                                                                                          prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/cms/preview-templates/BlogPostPreview.js
+  15:3   error  propType "entry" is not required, but has no corresponding defaultProp declaration      react/require-default-props
+  16:26  error  Delete `,`                                                                              prettier/prettier
+  18:3   error  propType "widgetFor" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  18:28  error  Delete `,`                                                                              prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/cms/preview-templates/ProductPagePreview.js
+  27:62  error  Delete `,`                                                                             prettier/prettier
+  31:62  error  Delete `,`                                                                             prettier/prettier
+  35:62  error  Delete `,`                                                                             prettier/prettier
+  36:10  error  Delete `,`                                                                             prettier/prettier
+  43:28  error  Delete `,`                                                                             prettier/prettier
+  50:3   error  propType "entry" is not required, but has no corresponding defaultProp declaration     react/require-default-props
+  51:26  error  Delete `,`                                                                             prettier/prettier
+  53:3   error  propType "getAsset" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  53:27  error  Delete `,`                                                                             prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Content.js
+   5:30  warning  Dangerous property 'dangerouslySetInnerHTML' found                                                            react/no-danger
+   8:45  error    Replace `(⏎··<div·className={className}>{content}</div>⏎)` with `<div·className={className}>{content}</div>`  prettier/prettier
+  13:3   error    propType "content" is not required, but has no corresponding defaultProp declaration                          react/require-default-props
+  14:3   error    propType "className" is not required, but has no corresponding defaultProp declaration                        react/require-default-props
+  14:30  error    Delete `,`                                                                                                    prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Features.js
+  20:3   error  propType "gridItems" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  23:29  error  Delete `,`                                                                              prettier/prettier
+  25:4   error  Delete `,`                                                                              prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Layout.js
+  4:20  error  Useless path segments for "../components/Navbar", should be "./Navbar"  import/no-useless-path-segments
+  7:28  error  'children' is missing in props validation                               react/prop-types
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Navbar.js
+  26:36  error  Delete `⏎········`  prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Pricing.js
+   9:70  error  Replace `⏎············{price.plan}⏎··········` with `{price.plan}`                 prettier/prettier
+  12:93  error  Replace `⏎············${price.price}⏎··········` with `${price.price}`             prettier/prettier
+  13:14  error  `{price.price}` must be placed on a new line                                       react/jsx-one-expression-per-line
+  30:3   error  propType "data" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  35:29  error  Delete `,`                                                                         prettier/prettier
+  37:4   error  Delete `,`                                                                         prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/components/Testimonials.js
+  12:17  error  ` – ` must be placed on a new line                                                         react/jsx-one-expression-per-line
+  12:20  error  `{testimonial.author}` must be placed on a new line                                        react/jsx-one-expression-per-line
+  20:3   error  propType "testimonials" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  23:31  error  Delete `,`                                                                                 prettier/prettier
+  25:4   error  Delete `,`                                                                                 prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/pages/index.js
+   3:10  error  'Link' is defined but never used                                                   no-unused-vars
+   4:8   error  'Layout' is defined but never used                                                 no-unused-vars
+   6:16  error  Component should be written as a pure function                                     react/prefer-stateless-function
+   9:20  error  'posts' is assigned a value but never used                                         no-unused-vars
+  17:24  error  Delete `,`                                                                         prettier/prettier
+  18:11  error  Delete `⏎······`                                                                   prettier/prettier
+  28:3   error  propType "data" is not required, but has no corresponding defaultProp declaration  react/require-default-props
+  30:29  error  Delete `,`                                                                         prettier/prettier
+  31:7   error  Delete `,`                                                                         prettier/prettier
+  32:5   error  Delete `,`                                                                         prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/pages/tags/index.js
+   8:3   error  'data' is missing in props validation                                                                                                                                                              react/prop-types
+  11:30  error  Delete `,`                                                                                                                                                                                         prettier/prettier
+  12:6   error  Delete `,`                                                                                                                                                                                         prettier/prettier
+  13:4   error  Delete `,`                                                                                                                                                                                         prettier/prettier
+  20:15  error  Replace `⏎············className="column·is-10·is-offset-1"⏎············style={{·marginBottom:·'6rem'·}}⏎··········` with `·className="column·is-10·is-offset-1"·style={{·marginBottom:·'6rem'·}}`  prettier/prettier
+  29:37  error  ` (` must be placed on a new line                                                                                                                                                                  react/jsx-one-expression-per-line
+  29:39  error  `{tag.totalCount}` must be placed on a new line                                                                                                                                                    react/jsx-one-expression-per-line
+  29:55  error  `)                  ` must be placed on a new line                                                                                                                                                 react/jsx-one-expression-per-line
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/templates/about-page.js
+  16:82  error  Replace `⏎················{title}⏎··············` with `{title}`                                                                                                                                                      prettier/prettier
+  30:3   error  propType "content" is not required, but has no corresponding defaultProp declaration                                                                                                                                  react/require-default-props
+  31:3   error  propType "contentComponent" is not required, but has no corresponding defaultProp declaration                                                                                                                         react/require-default-props
+  31:35  error  Delete `,`                                                                                                                                                                                                            prettier/prettier
+  39:25  error  Replace `⏎········contentComponent={HTMLContent}⏎········title={post.frontmatter.title}⏎········content={post.html}⏎·····` with `·contentComponent={HTMLContent}·title={post.frontmatter.title}·content={post.html}`  prettier/prettier
+  49:3   error  Prop type `object` is forbidden                                                                                                                                                                                       react/forbid-prop-types
+  49:36  error  Delete `,`                                                                                                                                                                                                            prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/templates/blog-post.js
+   9:35  error  Replace `⏎··content,⏎··contentComponent,⏎··description,⏎··tags,⏎··title,⏎··helmet,⏎` with `·content,·contentComponent,·description,·tags,·title,·helmet·`  prettier/prettier
+  13:3   error  'tags' is missing in props validation                                                                                                                      react/prop-types
+  25:80  error  Replace `⏎··············{title}⏎············` with `{title}`                                                                                               prettier/prettier
+  35:30  error  Unexpected string concatenation                                                                                                                            prefer-template
+  51:3   error  propType "contentComponent" is not required, but has no corresponding defaultProp declaration                                                              react/require-default-props
+  52:3   error  propType "description" is not required, but has no corresponding defaultProp declaration                                                                   react/require-default-props
+  53:3   error  propType "title" is not required, but has no corresponding defaultProp declaration                                                                         react/require-default-props
+  54:3   error  propType "helmet" is not required, but has no corresponding defaultProp declaration                                                                        react/require-default-props
+  54:39  error  Delete `,`                                                                                                                                                 prettier/prettier
+  75:3   error  propType "data" is not required, but has no corresponding defaultProp declaration                                                                          react/require-default-props
+  76:37  error  Delete `,`                                                                                                                                                 prettier/prettier
+  77:5   error  Delete `,`                                                                                                                                                 prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/templates/product-page.js
+   18:10  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+   26:19  error  Replace `⏎················className="full-width-image-container·margin-top-0"⏎················style={{·backgroundImage:·`url(${image})`·}}⏎··············` with `·className="full-width-image-container·margin-top-0"·style={{·backgroundImage:·`url(${image})`·}}`                   prettier/prettier
+   36:36  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+   37:21  error  Delete `⏎················`                                                                                                                                                                                                                                                            prettier/prettier
+   44:70  error  Replace `⏎····················{heading}⏎··················` with `{heading}`                                                                                                                                                                                                          prettier/prettier
+   53:70  error  Replace `⏎····················{main.heading}⏎··················` with `{main.heading}`                                                                                                                                                                                                prettier/prettier
+   64:29  error  Replace `⏎··························style={{·borderRadius:·'5px'·}}⏎··························src={main.image1.image}⏎··························alt={main.image1.alt}⏎·······················` with `·style={{·borderRadius:·'5px'·}}·src={main.image1.image}·alt={main.image1.alt}`  prettier/prettier
+   73:29  error  Replace `⏎··························style={{·borderRadius:·'5px'·}}⏎··························src={main.image2.image}⏎··························alt={main.image2.alt}⏎·······················` with `·style={{·borderRadius:·'5px'·}}·src={main.image2.image}·alt={main.image2.alt}`  prettier/prettier
+   83:27  error  Replace `⏎························style={{·borderRadius:·'5px'·}}⏎························src={main.image3.image}⏎························alt={main.image3.alt}⏎·····················` with `·style={{·borderRadius:·'5px'·}}·src={main.image3.image}·alt={main.image3.alt}`          prettier/prettier
+   93:19  error  Replace `⏎················className="full-width-image-container"⏎················style={{·backgroundImage:·`url(${fullImage})`·}}⏎·············` with `·className="full-width-image-container"·style={{·backgroundImage:·`url(${fullImage})`·}}`                                      prettier/prettier
+   97:66  error  Replace `⏎················{pricing.heading}⏎··············` with `{pricing.heading}`                                                                                                                                                                                                  prettier/prettier
+  111:3   error  propType "image" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                    react/require-default-props
+  112:3   error  propType "title" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                    react/require-default-props
+  113:3   error  propType "heading" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                  react/require-default-props
+  114:3   error  propType "description" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                              react/require-default-props
+  115:3   error  propType "intro" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                    react/require-default-props
+  116:28  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  118:3   error  propType "main" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                     react/require-default-props
+  123:29  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  125:3   error  Prop type `array` is forbidden                                                                                                                                                                                                                                                        react/forbid-prop-types
+  125:3   error  propType "testimonials" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                             react/require-default-props
+  126:3   error  propType "fullImage" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                react/require-default-props
+  127:3   error  propType "pricing" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                  react/require-default-props
+  130:27  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  131:5   error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  155:3   error  propType "data" is not required, but has no corresponding defaultProp declaration                                                                                                                                                                                                     react/require-default-props
+  157:36  error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  158:7   error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+  159:5   error  Delete `,`                                                                                                                                                                                                                                                                            prettier/prettier
+
+/home/basicdays/Documents/wip/basicdays-consulting/chicagojs.org/src/templates/tags.js
+   6:1   error  Component should be written as a pure function                                                                                                                                                                 react/prefer-stateless-function
+   8:19  error  Must use destructuring props assignment                                                                                                                                                                        react/destructuring-assignment
+   8:30  error  'data' is missing in props validation                                                                                                                                                                          react/prop-types
+   8:35  error  'data.allMarkdownRemark' is missing in props validation                                                                                                                                                        react/prop-types
+   8:53  error  'data.allMarkdownRemark.edges' is missing in props validation                                                                                                                                                  react/prop-types
+  16:11  error  Use object destructuring                                                                                                                                                                                       prefer-destructuring
+  16:17  error  Must use destructuring props assignment                                                                                                                                                                        react/destructuring-assignment
+  16:28  error  'pageContext' is missing in props validation                                                                                                                                                                   react/prop-types
+  16:40  error  'pageContext.tag' is missing in props validation                                                                                                                                                               react/prop-types
+  17:11  error  Use object destructuring                                                                                                                                                                                       prefer-destructuring
+  17:19  error  Must use destructuring props assignment                                                                                                                                                                        react/destructuring-assignment
+  17:35  error  'data.site' is missing in props validation                                                                                                                                                                     react/prop-types
+  17:40  error  'data.site.siteMetadata' is missing in props validation                                                                                                                                                        react/prop-types
+  17:53  error  'data.site.siteMetadata.title' is missing in props validation                                                                                                                                                  react/prop-types
+  18:11  error  Use object destructuring                                                                                                                                                                                       prefer-destructuring
+  18:24  error  Must use destructuring props assignment                                                                                                                                                                        react/destructuring-assignment
+  18:58  error  'data.allMarkdownRemark.totalCount' is missing in props validation                                                                                                                                             react/prop-types
+  19:44  error  Replace `⏎······totalCount·===·1·?·''·:·'s'⏎····` with `totalCount·===·1·?·''·:·'s'`                                                                                                                           prettier/prettier
+  29:19  error  Replace `⏎················className="column·is-10·is-offset-1"⏎················style={{·marginBottom:·'6rem'·}}⏎··············` with `·className="column·is-10·is-offset-1"·style={{·marginBottom:·'6rem'·}}`  prettier/prettier
+
+✖ 144 problems (143 errors, 1 warning)
+  86 errors and 0 warnings potentially fixable with the `--fix` option.

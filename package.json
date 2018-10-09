@@ -27,7 +27,7 @@
     "uuid": "^3.2.1"
   },
   "keywords": [
-    "chiccago",
+    "chicago",
     "javascript"
   ],
   "license": "MIT",
@@ -37,7 +37,7 @@
     "clean": "rimraf .cache public",
     "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop",
-    "lint": "eslint .",
+    "lint": "eslint -o eslint.log --no-color .",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -48,6 +48,7 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "1.14.3",
     "rimraf": "^2.6.2"

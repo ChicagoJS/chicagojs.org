@@ -1,6 +1,10 @@
 # ChicagoJS Website
 
-## Prerequisites
+## An inclusive, community-driven Javascript community in Chicago. See our [Code of Conduct](/CODE-OF-CONDUCT.md)
+
+We invite all those who participate in ChicagoJS to help us create safe and positive experiences for everyone.
+
+## Gatsby Prerequisites
 
 - Node (I recommend using v8.2.0 or higher)
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)

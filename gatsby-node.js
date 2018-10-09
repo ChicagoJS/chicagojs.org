@@ -39,13 +39,11 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
+        component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
         // additional data can be passed via context
         context: {
-          id,
-        },
+          id
+        }
       })
     })
 
@@ -68,8 +66,8 @@ exports.createPages = ({ actions, graphql }) => {
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
         context: {
-          tag,
-        },
+          tag
+        }
       })
     })
   })
@@ -83,7 +81,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }

@@ -20,9 +20,9 @@ Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
     PropTypes.shape({
       quote: PropTypes.string,
-      author: PropTypes.string,
+      author: PropTypes.string
     })
-  ),
+  )
 }
 
 export default Testimonials

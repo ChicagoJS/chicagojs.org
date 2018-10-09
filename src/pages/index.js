@@ -14,9 +14,8 @@ export default class IndexPage extends React.Component {
           width: '100%',
           height: '100%',
           textAlign: 'center',
-          marginTop: 40,
-        }}
-      >
+          marginTop: 40
+        }}>
         <h1>ChicagoJS Community</h1>
         <span>Coming Soon</span>
       </div>
@@ -27,9 +26,9 @@ export default class IndexPage extends React.Component {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+      edges: PropTypes.array
+    })
+  })
 }
 
 export const pageQuery = graphql`

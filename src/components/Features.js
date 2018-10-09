@@ -20,9 +20,9 @@ FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.string,
-      text: PropTypes.string,
+      text: PropTypes.string
     })
-  ),
+  )
 }
 
 export default FeatureGrid

@@ -23,8 +23,7 @@ const Navbar = () => (
           className="navbar-item"
           href="https://github.com/chicagojs/chicagojs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           <span className="icon">
             <img src={github} alt="Github" />
           </span>

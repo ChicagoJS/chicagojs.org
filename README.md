@@ -1,7 +1,6 @@
-# ChicagoJS Website
+# ChicagoJS.org
 
-## An inclusive, community-driven Javascript community in Chicago. See our [Code of Conduct](/CODE-OF-CONDUCT.md)
-
+An inclusive, community-driven Javascript community in Chicago. See our [Code of Conduct](/CODE-OF-CONDUCT.md). Help us build the JS community you wish you had!
 We invite all those who participate in ChicagoJS to help us create safe and positive experiences for everyone.
 
 ## Gatsby Prerequisites

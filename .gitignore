@@ -5,5 +5,15 @@ node_modules
 # Build directory
 public/
 static/admin/*.bundle.*
+*.log
+
+# Editors
+/.idea
+*.swp
+*.swo
+*.kate-swp
+
+# File Managers
 .DS_Store
-yarn-error.log
+.directory
+Thumbs.db

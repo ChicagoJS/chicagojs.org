@@ -1,0 +1,39 @@
+{
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "script"
+  },
+  "env": {
+    "node": true
+  },
+  "rules":{
+    "react/jsx-filename-extension": ["error", {"extensions": [".js"]}],
+    "strict": ["error", "safe"]
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "env": {
+        "browser": true,
+        "commonjs": true,
+        "node": false
+      },
+      "globals": {
+        "process": false
+      }
+    },
+    {
+      "files": ["src/**/*.test.js"],
+      "env": {
+        "mocha": true
+      }
+    }
+  ]
+}

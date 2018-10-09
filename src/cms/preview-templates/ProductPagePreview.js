@@ -24,23 +24,23 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         description: entry.getIn(['data', 'main', 'description']),
         image1: {
           image: getAsset(entry.getIn(['data', 'main', 'image1', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image1', 'alt']),
+          alt: entry.getIn(['data', 'main', 'image1', 'alt'])
         },
         image2: {
           image: getAsset(entry.getIn(['data', 'main', 'image2', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image2', 'alt']),
+          alt: entry.getIn(['data', 'main', 'image2', 'alt'])
         },
         image3: {
           image: getAsset(entry.getIn(['data', 'main', 'image3', 'image'])),
-          alt: entry.getIn(['data', 'main', 'image3', 'alt']),
-        },
+          alt: entry.getIn(['data', 'main', 'image3', 'alt'])
+        }
       }}
       fullImage={entry.getIn(['data', 'full_image'])}
       testimonials={testimonials}
       pricing={{
         heading: entry.getIn(['data', 'pricing', 'heading']),
         description: entry.getIn(['data', 'pricing', 'description']),
-        plans: pricingPlans,
+        plans: pricingPlans
       }}
     />
   )
@@ -48,9 +48,9 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 
 ProductPagePreview.propTypes = {
   entry: PropTypes.shape({
-    getIn: PropTypes.func,
+    getIn: PropTypes.func
   }),
-  getAsset: PropTypes.func,
+  getAsset: PropTypes.func
 }
 
 export default ProductPagePreview

@@ -6,6 +6,7 @@
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^2.0.0",
+    "gatsby-plugin-mailchimp": "https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-netlify-cms": "^3.0.0",
     "gatsby-plugin-react-helmet": "^3.0.0",

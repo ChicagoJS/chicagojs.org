@@ -29,6 +29,14 @@ module.exports = {
         plugins: []
       }
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        typeName: 'Config',
+        path: `./src/data/`,
+      },
+    },
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 }

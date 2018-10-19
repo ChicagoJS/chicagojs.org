@@ -12,7 +12,6 @@ class MailingListForm extends React.Component {
   _handleSubmit = async event => {
     event.preventDefault()
 
-    // TODO: Validate inputs
     const { email, firstName, lastName } = this.state
     const listFields = { firstName, lastName }
 
@@ -26,11 +25,12 @@ class MailingListForm extends React.Component {
     const { email, firstName, lastName } = this.state
     return (
       <form onSubmit={this._handleSubmit}>
+        <h3>Sign up to our mailing list!</h3>
         {/* E-mail */}
         <label>
           Email:
           <input
-            type="text"
+            type="email"
             name="email"
             id="mailchimp-email"
             placeholder="Your email address"

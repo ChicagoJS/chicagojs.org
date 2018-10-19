@@ -13,7 +13,6 @@ class MailingListForm extends React.Component {
     event.preventDefault()
 
     // TODO: Validate inputs
-    // TODO: Make only email required
     const { email, firstName, lastName } = this.state
     const listFields = { firstName, lastName }
 

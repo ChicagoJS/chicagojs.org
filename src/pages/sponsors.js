@@ -33,27 +33,57 @@ export default class sponsors extends React.Component {
 
   componentDidMount() {
     this.setState({sponsorsData: testData});
-    this.grabGoldSponsors();
   }
 
   grabGoldSponsors = () => {
    let goldSponsorsArray = testData.filter(data => data.title === 'gold sponsors');
    console.log(goldSponsorsArray[0].items);
-   goldSponsorsArray[0].items.map((i,index) => {
-
+   return goldSponsorsArray[0].items.map((i,index) => {
+    <div class="col-md-6 col-lg-4">
+        <div class="card border-0 transform-on-hover">
+            <a class="lightbox" href="https://www.amazon.com/" target="_blank">
+                {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
+            </a>
+            <div class="card-body gold">
+                <h6><a href="#">{`${i.name}`}</a></h6>
+            </div>
+        </div>
+    </div>
    });
   }
 
   grabSliverSponsors = () => {
     let sliverSponsorsArray = testData.filter(data => data.title === 'sliver sponsors');
     console.log(sliverSponsorsArray[0].items);
-
+    return sliverSponsorsArray[0].items.map((i,index) => {
+      <div class="col-md-6 col-lg-4">
+          <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="https://www.amazon.com/" target="_blank">
+                  {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
+              </a>
+              <div class="card-body sliver">
+                  <h6><a href="#">{`${i.name}`}</a></h6>
+              </div>
+          </div>
+      </div>
+     });
    }
 
    grabBronzeSponsors = () => {
     let bronzeSponsorsArray = testData.filter(data => data.title === 'bronze sponsors');
     console.log(bronzeSponsorsArray[0].items);
-
+    return goldSponsorsArray[0].items.map((i,index) => {
+      <div class="col-md-6 col-lg-4">
+          <div class="card border-0 transform-on-hover">
+              <a class="lightbox" href="https://www.amazon.com/" target="_blank">
+                  {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
+              </a>
+              <div class="card-body bronze">
+                  <h6><a href="#">{`${i.name}`}</a></h6>
+              </div>
+          </div>
+      </div>
+     });
    }
 
   render() {
@@ -94,15 +124,24 @@ export default class sponsors extends React.Component {
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Gold</h2>
             </div>
+            <div className={"row"} >
+
+            </div>
           </div> 
           <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Sliver</h2>
             </div>
+            <div className="row" >
+              
+            </div>
           </div> 
           <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Bronze</h2>
+            </div>
+            <div className="row">
+              
             </div>
           </div>  
         </div>

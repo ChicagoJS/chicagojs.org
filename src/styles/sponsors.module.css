@@ -1,0 +1,103 @@
+.jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0471f46a1cda51342fdecf9a8c42349f&auto=format&fit=crop&w=1852&q=80);
+    background-size: cover;
+}
+
+.heading {
+    font-size: 6em;
+    font-weight: 3em;
+    color: #ffffff;
+}
+
+.headingContainer {
+    border-bottom: 5px solid #000000;
+}
+
+.blurb {
+    font-size: 2.5em;
+    font-weight: 2em;
+}
+
+.sponsorsLevel {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+
+/*Old styling from JSCAMP Here till I know for sure I don't need it  */ 
+/* .gallery-block{
+	padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block .heading h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.cards-gallery h6 {
+  font-size: 17px; 
+}
+
+.gallery-block.cards-gallery .card{
+  transition: 0.4s ease;
+}
+
+.gallery-block.cards-gallery .card img {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); 
+}
+
+.gallery-block.cards-gallery .card-body {
+  text-align: center; 
+}
+
+/*Card colors */
+/*
+.platinum {
+    background-color: #e5e4e2;
+}
+
+.gold {
+    background-color: #ffd700;
+}
+
+.sliver {
+    background-color: #534b4f;
+}
+
+.bronze {
+    background-color: #cd7f32;
+}
+
+.gallery-block.cards-gallery .card-body p {
+  font-size: 15px; 
+}
+
+.gallery-block.cards-gallery a {
+  color: #212529; 
+}
+
+.gallery-block.cards-gallery a:hover {
+  text-decoration: none; 
+}
+
+.gallery-block.cards-gallery .card {
+  margin-bottom: 30px; 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+*/
+@media (min-width: 576px) {
+	/* .gallery-block .transform-on-hover:hover {
+	    transform: translateY(-10px) scale(1.02);
+	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+    } */
+}

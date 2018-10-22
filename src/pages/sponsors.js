@@ -5,7 +5,57 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
+
+const testData = [
+  {
+    title: "gold sponsors",
+    items: [
+        { name: 'one' },
+        { name: 'two' }
+    ]
+  },
+  {
+    title: "sliver sponsors",
+    items: [
+        { name: 'one' },
+        { name: 'two' }
+    ]
+  }
+]
 export default class sponsors extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state ={
+      sponsorsData: null
+    }
+  }
+
+  componentDidMount() {
+    this.setState({sponsorsData: testData});
+    this.grabGoldSponsors();
+  }
+
+  grabGoldSponsors = () => {
+   let goldSponsorsArray = testData.filter(data => data.title === 'gold sponsors');
+   console.log(goldSponsorsArray[0].items);
+   goldSponsorsArray[0].items.map((i,index) => {
+
+   });
+  }
+
+  grabSliverSponsors = () => {
+    let sliverSponsorsArray = testData.filter(data => data.title === 'sliver sponsors');
+    console.log(sliverSponsorsArray[0].items);
+
+   }
+
+   grabBronzeSponsors = () => {
+    let bronzeSponsorsArray = testData.filter(data => data.title === 'bronze sponsors');
+    console.log(bronzeSponsorsArray[0].items);
+
+   }
+
   render() {
     return (
       <div className="page-container">
@@ -35,11 +85,11 @@ export default class sponsors extends React.Component {
             </div>
         </div>
         <div>
-          <div className="container">
+          {/* <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Platinum</h2>
             </div>
-          </div>
+          </div> */}
           <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Gold</h2>

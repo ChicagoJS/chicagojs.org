@@ -7,20 +7,66 @@ import Layout from '../components/Layout'
 
 
 const testData = [
-  {
-    title: "gold sponsors",
-    items: [
-        { name: 'one' },
-        { name: 'two' }
-    ]
-  },
-  {
-    title: "sliver sponsors",
-    items: [
-        { name: 'one' },
-        { name: 'two' }
-    ]
-  }
+	{
+		title: "platinum sponsors",
+		items: [
+			{ 
+				name: 'one',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'two',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'three',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'four',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+		]
+	  },
+	  {
+		title: "gold sponsors",
+		items: [
+			{ 
+				name: 'one',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'two',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'three',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+		]
+	  },
+	  {
+		title: "sliver sponsors",
+		items: [
+			{ 
+				name: 'one',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			},
+			{ 
+				name: 'two',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			}
+		]
+	  },
+	  {
+		title: "bronze sponsors",
+		items: [
+			{ 
+				name: 'one',
+				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+			}
+		]
+	  },
 ]
 export default class sponsors extends React.Component {
   constructor(props){
@@ -35,55 +81,75 @@ export default class sponsors extends React.Component {
     this.setState({sponsorsData: testData});
   }
 
+  grabPlatinumSponsors = () => {
+	let platinumSponsorsArray = testData.filter(data => data.title === 'platinum sponsors');
+	if( platinumSponsorsArray[0].items.length !== 0 ) {
+		return platinumSponsorsArray[0].items.map((i,index) => (
+			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
+				<div className="card border-0 transform-on-hover">
+					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
+						<img src={i.image} alt="Card Image" className="card-img-top" />
+					</a>
+					<div className={`${styles.cardBody} ${styles.platinum}`}>
+						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+					</div>
+				</div>
+			</div>
+		));
+		}
+	}
+
   grabGoldSponsors = () => {
    let goldSponsorsArray = testData.filter(data => data.title === 'gold sponsors');
-   console.log(goldSponsorsArray[0].items);
-   return goldSponsorsArray[0].items.map((i,index) => {
-    <div class="col-md-6 col-lg-4">
-        <div class="card border-0 transform-on-hover">
-            <a class="lightbox" href="https://www.amazon.com/" target="_blank">
-                {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
-            </a>
-            <div class="card-body gold">
-                <h6><a href="#">{`${i.name}`}</a></h6>
-            </div>
-        </div>
-    </div>
-   });
+   if( goldSponsorsArray[0].items.length !== 0 ) {
+	return goldSponsorsArray[0].items.map((i,index) => (
+		<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
+			<div className="card border-0 transform-on-hover">
+				<a className="lightbox" href="https://www.amazon.com/" target="_blank">
+					<img src={i.image} alt="Card Image" className="card-img-top" />
+				</a>
+				<div className={`${styles.cardBody} ${styles.gold}`}>
+					<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+				</div>
+			</div>
+		</div>
+	));
+   }
   }
 
   grabSliverSponsors = () => {
-    let sliverSponsorsArray = testData.filter(data => data.title === 'sliver sponsors');
-    console.log(sliverSponsorsArray[0].items);
-    return sliverSponsorsArray[0].items.map((i,index) => {
-      <div class="col-md-6 col-lg-4">
-          <div class="card border-0 transform-on-hover">
-              <a class="lightbox" href="https://www.amazon.com/" target="_blank">
-                  {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
-              </a>
-              <div class="card-body sliver">
-                  <h6><a href="#">{`${i.name}`}</a></h6>
-              </div>
-          </div>
-      </div>
-     });
+	let sliverSponsorsArray = testData.filter(data => data.title === 'sliver sponsors');
+	if( sliverSponsorsArray[0].items.length !== 0 ) {
+		return sliverSponsorsArray[0].items.map((i,index) => (
+			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
+				<div className="card border-0 transform-on-hover">
+					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
+						<img src={i.image} alt="Card Image" className="card-img-top" />
+					</a>
+					<div className={`${styles.cardBody} ${styles.sliver}`}>
+						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+					</div>
+				</div>
+			</div>
+		));
+	}
    }
-
    grabBronzeSponsors = () => {
-    let bronzeSponsorsArray = testData.filter(data => data.title === 'bronze sponsors');
-    console.log(bronzeSponsorsArray[0].items);
-    return goldSponsorsArray[0].items.map((i,index) => {
-      <div class="col-md-6 col-lg-4">
-          <div class="card border-0 transform-on-hover">
-              <a class="lightbox" href="https://www.amazon.com/" target="_blank">
-                  {/* <img src="images/amazon.jpg" alt="Card Image" class="card-img-top" /> */}
-              </a>
-              <div class="card-body bronze">
-                  <h6><a href="#">{`${i.name}`}</a></h6>
-              </div>
-          </div>
-      </div>
-     });
+	let bronzeSponsorsArray = testData.filter(data => data.title === 'bronze sponsors');
+	if( bronzeSponsorsArray[0].items.length !== 0 ) {
+		return bronzeSponsorsArray[0].items.map((i,index) => (
+			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
+				<div className="card border-0 transform-on-hover">
+					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
+						<img src={i.image} alt="Card Image" className="card-img-top" />
+					</a>
+					<div className={`${styles.cardBody} ${styles.bronze}`}>
+						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+					</div>
+				</div>
+			</div>
+		));
+	}
    }
 
   render() {
@@ -114,18 +180,21 @@ export default class sponsors extends React.Component {
                 </div>
             </div>
         </div>
-        <div>
-          {/* <div className="container">
-            <div className={styles.headingContainer}>
-                <h2 className={styles.sponsorsLevel}>Platinum</h2>
-            </div>
-          </div> */}
+        <div className={`gallery-block `}>
+			<div className="container">
+			<div className={styles.headingContainer}>
+				<h2 className={styles.sponsorsLevel}>Platinum</h2>
+			</div>
+			<div className={"row"} >
+				{this.grabPlatinumSponsors()}
+			</div>
+          </div>  
           <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Gold</h2>
             </div>
             <div className={"row"} >
-
+                {this.grabGoldSponsors()}
             </div>
           </div> 
           <div className="container">
@@ -133,7 +202,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Sliver</h2>
             </div>
             <div className="row" >
-              
+				{this.grabSliverSponsors()}
             </div>
           </div> 
           <div className="container">
@@ -141,7 +210,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Bronze</h2>
             </div>
             <div className="row">
-              
+				{this.grabBronzeSponsors()}
             </div>
           </div>  
         </div>

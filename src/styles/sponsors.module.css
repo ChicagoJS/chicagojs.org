@@ -10,6 +10,7 @@
 }
 
 .headingContainer {
+    margin-bottom: 2em;
     border-bottom: 5px solid #000000;
 }
 
@@ -27,12 +28,44 @@
 }
 
 
-/*Old styling from JSCAMP Here till I know for sure I don't need it  */ 
-/* .gallery-block{
+
+.gallery-block {
 	padding-bottom: 60px;
     padding-top: 60px;
 }
 
+.sponsorCard {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.sponsorName {
+    color: #000000;
+    font-size: 2em;
+}
+.cardBody {
+    text-align: center;
+}
+
+/*Card colors */
+.platinum {
+    background-color: #e5e4e2;
+}
+
+.gold {
+    background-color: #ffd700;
+}
+
+.sliver {
+    background-color: #534b4f;
+}
+
+.bronze {
+    background-color: #cd7f32;
+}
+
+/*Old styling from JSCAMP Here till I know for sure I don't need it  */ 
+/*
 .gallery-block .heading{
     margin-bottom: 50px;
     text-align: center;
@@ -60,24 +93,6 @@
   text-align: center; 
 }
 
-/*Card colors */
-/*
-.platinum {
-    background-color: #e5e4e2;
-}
-
-.gold {
-    background-color: #ffd700;
-}
-
-.sliver {
-    background-color: #534b4f;
-}
-
-.bronze {
-    background-color: #cd7f32;
-}
-
 .gallery-block.cards-gallery .card-body p {
   font-size: 15px; 
 }
@@ -96,8 +111,8 @@
 }
 */
 @media (min-width: 576px) {
-	/* .gallery-block .transform-on-hover:hover {
+	.gallery-block .transform-on-hover:hover {
 	    transform: translateY(-10px) scale(1.02);
 	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
-    } */
+    }
 }

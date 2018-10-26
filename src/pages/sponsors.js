@@ -190,7 +190,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Sliver</h2>
             </div>
             <div className="row" >
-				{this.grabTieredSponsors('sliver')}
+								{this.grabTieredSponsors('sliver')}
             </div>
           </div> 
           <div className="container">
@@ -198,7 +198,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Bronze</h2>
             </div>
             <div className="row">
-				{this.grabTieredSponsors('bronze')}
+								{this.grabTieredSponsors('bronze')}
             </div>
           </div>  
         </div>

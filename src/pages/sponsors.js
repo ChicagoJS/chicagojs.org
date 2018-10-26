@@ -8,15 +8,15 @@ import Layout from '../components/Layout'
 
 const testData = [
 	{
-		title: "platinum sponsors",
+		title: "platinum",
 		items: [
 			{ 
 				name: 'one',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+				image: 'accenture'
 			},
 			{ 
 				name: 'two',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
+				image: 'carsdotcom'
 			},
 			{ 
 				name: 'three',
@@ -29,7 +29,7 @@ const testData = [
 		]
 	  },
 	  {
-		title: "gold sponsors",
+		title: "gold",
 		items: [
 			{ 
 				name: 'one',
@@ -46,7 +46,7 @@ const testData = [
 		]
 	  },
 	  {
-		title: "sliver sponsors",
+		title: "sliver",
 		items: [
 			{ 
 				name: 'one',
@@ -59,7 +59,7 @@ const testData = [
 		]
 	  },
 	  {
-		title: "bronze sponsors",
+		title: "bronze",
 		items: [
 			{ 
 				name: 'one',
@@ -78,79 +78,67 @@ export default class sponsors extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({sponsorsData: testData});
-  }
+		this.setState({sponsorsData: testData});
+	}
+	
+	getImageUrl = (companyName) => {
+		const URLRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/ ;
+		return URLRegex.test(companyName) ? companyName : 'https://res.cloudinary.com/chicagojs/image/upload/2018Sponsors/' + companyName;
+	}
 
-  grabPlatinumSponsors = () => {
-	let platinumSponsorsArray = testData.filter(data => data.title === 'platinum sponsors');
-	if( platinumSponsorsArray[0].items.length !== 0 ) {
-		return platinumSponsorsArray[0].items.map((i,index) => (
-			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
-				<div className="card border-0 transform-on-hover">
-					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
-						<img src={i.image} alt="Card Image" className="card-img-top" />
-					</a>
-					<div className={`${styles.cardBody} ${styles.platinum}`}>
-						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+	grabTieredSponsors = (tier) => {
+		const sponsorsArray = testData.find(data => data.title === tier);
+		function renderCorrectTierStyles(tier,name){
+		switch (tier) {
+
+				case 'platinum':
+					return(
+						<div className={`${styles.cardBody} ${styles.platinum}`}>
+							<h6 className={styles.sponsorName}>{`${name}`}</h6>
+						</div>
+					);
+				break;
+
+				case 'gold':
+					return(
+						<div className={`${styles.cardBody} ${styles.gold}`}>
+							<h6 className={styles.sponsorName}>{`${name}`}</h6>
+						</div>
+					);
+				break;
+
+				case 'sliver':
+					return(
+						<div className={`${styles.cardBody} ${styles.sliver}`}>
+							<h6 className={styles.sponsorName}>{`${name}`}</h6>
+						</div>
+					);
+				break;
+
+				case 'bronze':
+					return(
+						<div className={`${styles.cardBody} ${styles.bronze}`}>
+							<h6 className={styles.sponsorName}>{`${name}`}</h6>
+						</div>
+					);
+				break;
+
+			}
+		}
+
+		if(sponsorsArray.items.length > 0) {
+			return sponsorsArray.items.map((i,index) => (
+				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
+					<div className="card border-0 transform-on-hover">
+						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
+							<img src={this.getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
+						</a>
+						{renderCorrectTierStyles(tier,i.name)};
 					</div>
 				</div>
-			</div>
-		));
+			));
 		}
 	}
-
-  grabGoldSponsors = () => {
-   let goldSponsorsArray = testData.filter(data => data.title === 'gold sponsors');
-   if( goldSponsorsArray[0].items.length !== 0 ) {
-	return goldSponsorsArray[0].items.map((i,index) => (
-		<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
-			<div className="card border-0 transform-on-hover">
-				<a className="lightbox" href="https://www.amazon.com/" target="_blank">
-					<img src={i.image} alt="Card Image" className="card-img-top" />
-				</a>
-				<div className={`${styles.cardBody} ${styles.gold}`}>
-					<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
-				</div>
-			</div>
-		</div>
-	));
-   }
-  }
-
-  grabSliverSponsors = () => {
-	let sliverSponsorsArray = testData.filter(data => data.title === 'sliver sponsors');
-	if( sliverSponsorsArray[0].items.length !== 0 ) {
-		return sliverSponsorsArray[0].items.map((i,index) => (
-			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
-				<div className="card border-0 transform-on-hover">
-					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
-						<img src={i.image} alt="Card Image" className="card-img-top" />
-					</a>
-					<div className={`${styles.cardBody} ${styles.sliver}`}>
-						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
-					</div>
-				</div>
-			</div>
-		));
-	}
-   }
-   grabBronzeSponsors = () => {
-	let bronzeSponsorsArray = testData.filter(data => data.title === 'bronze sponsors');
-	if( bronzeSponsorsArray[0].items.length !== 0 ) {
-		return bronzeSponsorsArray[0].items.map((i,index) => (
-			<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
-				<div className="card border-0 transform-on-hover">
-					<a className="lightbox" href="https://www.amazon.com/" target="_blank">
-						<img src={i.image} alt="Card Image" className="card-img-top" />
-					</a>
-					<div className={`${styles.cardBody} ${styles.bronze}`}>
-						<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
-					</div>
-				</div>
-			</div>
-		));
-	}
-   }
 
   render() {
     return (
@@ -181,20 +169,20 @@ export default class sponsors extends React.Component {
             </div>
         </div>
         <div className={`gallery-block `}>
-			<div className="container">
-			<div className={styles.headingContainer}>
-				<h2 className={styles.sponsorsLevel}>Platinum</h2>
-			</div>
-			<div className={"row"} >
-				{this.grabPlatinumSponsors()}
-			</div>
-          </div>  
+					<div className="container">
+            <div className={styles.headingContainer}>
+                <h2 className={styles.sponsorsLevel}>Platinum</h2>
+            </div>
+            <div className={"row"} >
+                {this.grabTieredSponsors('platinum')}
+            </div>
+          </div>
           <div className="container">
             <div className={styles.headingContainer}>
                 <h2 className={styles.sponsorsLevel}>Gold</h2>
             </div>
             <div className={"row"} >
-                {this.grabGoldSponsors()}
+                {this.grabTieredSponsors('gold')}
             </div>
           </div> 
           <div className="container">
@@ -202,7 +190,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Sliver</h2>
             </div>
             <div className="row" >
-				{this.grabSliverSponsors()}
+				{this.grabTieredSponsors('sliver')}
             </div>
           </div> 
           <div className="container">
@@ -210,7 +198,7 @@ export default class sponsors extends React.Component {
                 <h2 className={styles.sponsorsLevel}>Bronze</h2>
             </div>
             <div className="row">
-				{this.grabBronzeSponsors()}
+				{this.grabTieredSponsors('bronze')}
             </div>
           </div>  
         </div>

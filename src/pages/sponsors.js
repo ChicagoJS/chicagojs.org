@@ -133,7 +133,7 @@ export default class sponsors extends React.Component {
 						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
 							<img src={this.getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
 						</a>
-						{renderCorrectTierStyles(tier,i.name)};
+						{renderCorrectTierStyles(tier,i.name)}
 					</div>
 				</div>
 			));

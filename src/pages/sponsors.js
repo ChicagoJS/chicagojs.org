@@ -88,44 +88,6 @@ export default class sponsors extends React.Component {
 
 	grabTieredSponsors = (tier) => {
 		const sponsorsArray = testData.find(data => data.title === tier);
-		function renderCorrectTierStyles(tier,name){
-		switch (tier) {
-
-				case 'platinum':
-					return(
-						<div className={`${styles.cardBody} ${styles.platinum}`}>
-							<h6 className={styles.sponsorName}>{`${name}`}</h6>
-						</div>
-					);
-				break;
-
-				case 'gold':
-					return(
-						<div className={`${styles.cardBody} ${styles.gold}`}>
-							<h6 className={styles.sponsorName}>{`${name}`}</h6>
-						</div>
-					);
-				break;
-
-				case 'sliver':
-					return(
-						<div className={`${styles.cardBody} ${styles.sliver}`}>
-							<h6 className={styles.sponsorName}>{`${name}`}</h6>
-						</div>
-					);
-				break;
-
-				case 'bronze':
-					return(
-						<div className={`${styles.cardBody} ${styles.bronze}`}>
-							<h6 className={styles.sponsorName}>{`${name}`}</h6>
-						</div>
-					);
-				break;
-
-			}
-		}
-
 		if(sponsorsArray.items.length > 0) {
 			return sponsorsArray.items.map((i,index) => (
 				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
@@ -133,7 +95,9 @@ export default class sponsors extends React.Component {
 						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
 							<img src={this.getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
 						</a>
-						{renderCorrectTierStyles(tier,i.name)}
+						<div className={`${styles.cardBody} ${styles[tier]}`}>
+							<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
+						</div>
 					</div>
 				</div>
 			));

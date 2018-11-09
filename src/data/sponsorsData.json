@@ -4,65 +4,65 @@
 		"width": 300,
 		"items": [
 			{
-			"name": "accenture interactive",
+			"name": "Accenture Interactive",
 			"image": "accenture"
 			},
 			{
-			"name": "cars.com",
+			"name": "Cars.com",
 			"image": "carsdotcom"
 			},
 			{
-			"name": "server central",
+			"name": "Server Central",
 			"image": "servercentral"
 			},
 			{
-			"name": "turing group",
+			"name": "Turing Group",
 			"image": "turinggroup"
 			}
 		]
 	  },
 	  {
-		"title": "sliver",
+		"title": "silver",
 		"width" : 270,
 		"items": [
 			{ 
-				"name": "fraight ai",
+				"name": "Fraight Ai",
 				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/fraightai.png"
 			},
 			{ 
-				"name": "one north",
+				"name": "One North",
 				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/onenorth.png"
 			},
 			{ 
-				"name": "braintree",
+				"name": "Braintree",
 				"image": "braintree"
 			},
 			{ 
-				"name": "fly io",
+				"name": "Fly IO",
 				"image": "fly"
 			},
 			{ 
-				"name": "active campaign",
+				"name": "Active Campaign",
 				"image": "active campaign"
 			},
 			{ 
-				"name": "quik order",
-				"image": "quikorder"
+				"name": "Quik Order",
+				"image": "QuikOrder"
 			},
 			{ 
-				"name": "hash rocket",
+				"name": "Hash Rocket",
 				"image": "hashrocket"
 			},
 			{ 
-				"name": "dragon spears",
-				"image": "dragonspears"
+				"name": "Dragon Spears",
+				"image": "DragonSpears"
 			},
 			{ 
-				"name": "draftbit",
+				"name": "DraftBit",
 				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/draftbit.png"
 			},
 			{ 
-				"name": "next capital",
+				"name": "Next Capital",
 				"image": "next capital"
 			}
 		]

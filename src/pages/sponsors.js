@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import styles from "../styles/sponsors.module.css"
-import PropTypes from 'prop-types' // do we even need this because we don't have any props on this page?
 import { graphql } from 'gatsby'
 
 const SponsorsPage = ( {data} ) => {
@@ -13,7 +12,6 @@ const SponsorsPage = ( {data} ) => {
 
 	const grabTieredSponsors = (tier) => {
 		const sponsorsArray = data.allSponsorsDataJson.edges.find(data => data.node.title === tier);
-		console.log(sponsorsArray.node.items);
 		if(sponsorsArray.node.items.length > 0) {
 			return sponsorsArray.node.items.map((i,index) => (
 				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
@@ -59,14 +57,6 @@ const SponsorsPage = ( {data} ) => {
 					</div>
 			</div>
 			<div className={`gallery-block `}>
-				{/* <div className="container">
-					<div className={styles.headingContainer}>
-							<h2 className={styles.sponsorsLevel}>Platinum</h2>
-					</div>
-					<div className={"row"} >
-							{grabTieredSponsors('platinum')}
-					</div>
-				</div> */}
 				<div className="container">
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Gold</h2>
@@ -80,17 +70,9 @@ const SponsorsPage = ( {data} ) => {
 							<h2 className={styles.sponsorsLevel}>Sliver</h2>
 					</div>
 					<div className="row" >
-							{grabTieredSponsors('sliver')}
+							{grabTieredSponsors('silver')}
 					</div>
 				</div> 
-				{/* <div className="container">
-					<div className={styles.headingContainer}>
-							<h2 className={styles.sponsorsLevel}>Bronze</h2>
-					</div>
-					<div className="row">
-							{grabTieredSponsors('bronze')}
-					</div>
-				</div>   */}
 			</div>
 		</div>
 	)

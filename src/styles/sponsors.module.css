@@ -11,7 +11,7 @@
 
 .headingContainer {
     margin-bottom: 2em;
-    border-bottom: 5px solid #000000;
+    border-bottom: 3px solid #eeeeee;
 }
 
 .blurb {
@@ -27,7 +27,11 @@
     text-align: center;
 }
 
+.logostyle {
+    height: 300px;
+    width: 300px;
 
+}
 
 .gallery-block {
 	padding-bottom: 60px;
@@ -43,7 +47,9 @@
     color: #000000;
     font-size: 2em;
 }
+
 .cardBody {
+    /* border-top: 5px solid #000000;    */
     text-align: center;
 }
 

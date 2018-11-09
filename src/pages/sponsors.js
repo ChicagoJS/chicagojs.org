@@ -17,9 +17,9 @@ const SponsorsPage = ( {data} ) => {
 				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
 					<div className="card border-0 transform-on-hover">
 						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
-							<img src={getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
+							<img style={{height:100 ,width:300 }} src={getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
 						</a>
-						<div className={`${styles.cardBody} ${styles[tier]}`}>
+						<div className={`${styles.cardBody}`}>
 							<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
 						</div>
 					</div>
@@ -67,7 +67,7 @@ const SponsorsPage = ( {data} ) => {
 				</div> 
 				<div className="container">
 					<div className={styles.headingContainer}>
-							<h2 className={styles.sponsorsLevel}>Sliver</h2>
+							<h2 className={styles.sponsorsLevel}>Silver</h2>
 					</div>
 					<div className="row" >
 							{grabTieredSponsors('silver')}

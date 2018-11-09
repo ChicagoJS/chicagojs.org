@@ -59,14 +59,14 @@ const SponsorsPage = ( {data} ) => {
 					</div>
 			</div>
 			<div className={`gallery-block `}>
-				<div className="container">
+				{/* <div className="container">
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Platinum</h2>
 					</div>
 					<div className={"row"} >
 							{grabTieredSponsors('platinum')}
 					</div>
-				</div>
+				</div> */}
 				<div className="container">
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Gold</h2>
@@ -83,14 +83,14 @@ const SponsorsPage = ( {data} ) => {
 							{grabTieredSponsors('sliver')}
 					</div>
 				</div> 
-				<div className="container">
+				{/* <div className="container">
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Bronze</h2>
 					</div>
 					<div className="row">
 							{grabTieredSponsors('bronze')}
 					</div>
-				</div>  
+				</div>   */}
 			</div>
 		</div>
 	)

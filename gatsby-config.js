@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -27,6 +26,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: []
+      }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`
       }
     },
     'gatsby-plugin-netlify' // make sure to keep it last in the array

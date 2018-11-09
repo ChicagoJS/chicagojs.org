@@ -1,10 +1,7 @@
 ---
-templateKey: 'about-page'
-path: /about
-title: About our values
+path: /code-of-conduct
+title: ChicagoJS Code of Conduct
 ---
-
-# ChicagoJS Code of Conduct
 
 ## 1. Purpose
 

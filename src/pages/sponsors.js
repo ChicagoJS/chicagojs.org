@@ -69,12 +69,12 @@ const testData = [
 ]
 const SponsorsPage = ( {data} ) => {
 	
-	function getImageUrl(companyName) {
+	const getImageUrl = (companyName) => {
 		const URLRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/ ;
 		return URLRegex.test(companyName) ? companyName : 'https://res.cloudinary.com/chicagojs/image/upload/2018Sponsors/' + companyName;
 	}
 
-	 function grabTieredSponsors(tier) {
+	const grabTieredSponsors = (tier) => {
 		const sponsorsArray = testData.find(data => data.title === tier);
 		if(sponsorsArray.items.length > 0) {
 			return sponsorsArray.items.map((i,index) => (
@@ -157,4 +157,11 @@ const SponsorsPage = ( {data} ) => {
 	)
 }
 
+// export const query = graphql`
+// 	query SponsorsPageQuery {
+// 		sponsors {
+
+// 		}
+// 	}
+// `
 export default SponsorsPage;

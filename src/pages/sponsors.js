@@ -4,80 +4,18 @@ import styles from "../styles/sponsors.module.css"
 import PropTypes from 'prop-types' // do we even need this because we don't have any props on this page?
 import { graphql } from 'gatsby'
 
-
-const testData = [
-	{
-		title: "platinum",
-		items: [
-			{ 
-				name: 'one',
-				image: 'accenture'
-			},
-			{ 
-				name: 'two',
-				image: 'carsdotcom'
-			},
-			{ 
-				name: 'three',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-			{ 
-				name: 'four',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-		]
-	  },
-	  {
-		title: "gold",
-		items: [
-			{ 
-				name: 'one',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-			{ 
-				name: 'two',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-			{ 
-				name: 'three',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-		]
-	  },
-	  {
-		title: "sliver",
-		items: [
-			{ 
-				name: 'one',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			},
-			{ 
-				name: 'two',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			}
-		]
-	  },
-	  {
-		title: "bronze",
-		items: [
-			{ 
-				name: 'one',
-				image: 'https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60'
-			}
-		]
-	  },
-]
 const SponsorsPage = ( {data} ) => {
-	
+
 	const getImageUrl = (companyName) => {
 		const URLRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/ ;
 		return URLRegex.test(companyName) ? companyName : 'https://res.cloudinary.com/chicagojs/image/upload/2018Sponsors/' + companyName;
 	}
 
 	const grabTieredSponsors = (tier) => {
-		const sponsorsArray = testData.find(data => data.title === tier);
-		if(sponsorsArray.items.length > 0) {
-			return sponsorsArray.items.map((i,index) => (
+		const sponsorsArray = data.allSponsorsDataJson.edges.find(data => data.node.title === tier);
+		console.log(sponsorsArray.node.items);
+		if(sponsorsArray.node.items.length > 0) {
+			return sponsorsArray.node.items.map((i,index) => (
 				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
 					<div className="card border-0 transform-on-hover">
 						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
@@ -114,7 +52,8 @@ const SponsorsPage = ( {data} ) => {
 					<div className="row text-center">
 							<div className="heading">
 									<p className={styles.blurb}>
-										A Small Intro, maybe for thanking the sponsors... This text should be centered... Let's see if it worked!
+										All at ChicagoJS would like to thank our sponsors for their generosity! Without you guys none of this would
+										be possible.
 									</p>
 							</div>
 					</div>
@@ -157,11 +96,20 @@ const SponsorsPage = ( {data} ) => {
 	)
 }
 
-// export const query = graphql`
-// 	query SponsorsPageQuery {
-// 		sponsors {
+export const query = graphql`
+	query SponsorsPageQuery {
+		allSponsorsDataJson {
+			edges {
+				node {
+					title
+					items {
+						name
+						image
+					}
+				}
+			}
+		}
+	}
+`
 
-// 		}
-// 	}
-// `
 export default SponsorsPage;

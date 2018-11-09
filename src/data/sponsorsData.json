@@ -1,57 +1,69 @@
 [
 	{
-		"title": "platinum",
+		"title": "gold",
+		"width": 300,
 		"items": [
-			{ 
-				"name": "one",
-				"image": "accenture"
+			{
+			"name": "accenture interactive",
+			"image": "accenture"
 			},
-			{ 
-				"name": "two",
-				"image": "carsdotcom"
+			{
+			"name": "cars.com",
+			"image": "carsdotcom"
 			},
-			{ 
-				"name": "three",
-				"image": "https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60"
+			{
+			"name": "server central",
+			"image": "servercentral"
 			},
-			{ 
-				"name": "four",
-				"image": "https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60"
+			{
+			"name": "turing group",
+			"image": "turinggroup"
 			}
 		]
 	  },
 	  {
-		"title": "gold",
-		"items": [
-			{ 
-				"name": "one",
-				"image": "accenture"
-			},
-			{ 
-				"name": "two",
-				"image": "carsdotcom"
-			},
-			{ 
-				"name": "three",
-				"image": "https://images.unsplash.com/photo-1540377536853-9dcd8b00ec43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2d5ff5b74973558418041d226029f60&auto=format&fit=crop&w=500&q=60"
-			}
-		]
-      },
-      {
 		"title": "sliver",
+		"width" : 270,
 		"items": [
 			{ 
-				"name": "one",
-				"image": "accenture"
-			}
-		]
-      },
-      {
-		"title": "bronze",
-		"items": [
+				"name": "fraight ai",
+				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/fraightai.png"
+			},
 			{ 
-				"name": "one",
-				"image": "accenture"
+				"name": "one north",
+				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/onenorth.png"
+			},
+			{ 
+				"name": "braintree",
+				"image": "braintree"
+			},
+			{ 
+				"name": "fly io",
+				"image": "fly"
+			},
+			{ 
+				"name": "active campaign",
+				"image": "active campaign"
+			},
+			{ 
+				"name": "quik order",
+				"image": "quikorder"
+			},
+			{ 
+				"name": "hash rocket",
+				"image": "hashrocket"
+			},
+			{ 
+				"name": "dragon spears",
+				"image": "dragonspears"
+			},
+			{ 
+				"name": "draftbit",
+				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/draftbit.png"
+			},
+			{ 
+				"name": "next capital",
+				"image": "next capital"
 			}
 		]
       }

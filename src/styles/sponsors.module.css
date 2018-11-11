@@ -82,8 +82,10 @@
     }
 
     .sponsorCard {
+        display: flex;
         margin-top: 3em;
         margin-bottom: 3em;
+        align-items: center;
     }
 
     .mobileLogo {

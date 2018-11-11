@@ -58,7 +58,7 @@ const SponsorsPage = ( {data} ) => {
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Gold</h2>
 					</div>
-					<div className={"row"} >
+					<div className={`row ${styles.rowStyling }`} >
 							{grabTieredSponsors('gold')}
 					</div>
 				</div> 

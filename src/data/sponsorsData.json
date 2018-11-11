@@ -5,19 +5,23 @@
 		"items": [
 			{
 			"name": "Accenture Interactive",
-			"image": "accenture"
+			"image": "accenture",
+			"url": "https://www.accenture.com/us-en/interactive-index"
 			},
 			{
 			"name": "Cars.com",
-			"image": "carsdotcom"
+			"image": "carsdotcom",
+			"url": "https://www.cars.com/"
 			},
 			{
 			"name": "Server Central",
-			"image": "servercentral"
+			"image": "servercentral",
+			"url": "https://www.servercentral.com/"
 			},
 			{
 			"name": "Turing Group",
-			"image": "turinggroup"
+			"image": "turinggroup",
+			"url": "https://turinggroup.com/"
 			}
 		]
 	  },
@@ -27,43 +31,53 @@
 		"items": [
 			{ 
 				"name": "Fraight Ai",
-				"image": "https://workablehr.s3.amazonaws.com/uploads/account/logo/186514/large_fraight_black.png"
+				"image": "https://workablehr.s3.amazonaws.com/uploads/account/logo/186514/large_fraight_black.png",
+				"url": "https://fraight.ai/"
 			},
 			{ 
 				"name": "One North",
-				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/onenorth.png"
+				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/onenorth.png",
+				"url": "https://www.onenorth.com/"
 			},
 			{ 
 				"name": "Braintree",
-				"image": "braintree"
+				"image": "braintree",
+				"url": "https://www.braintreepayments.com/"
 			},
 			{ 
 				"name": "Fly IO",
-				"image": "fly"
+				"image": "fly",
+				"url": "https://fly.io/"
 			},
 			{ 
 				"name": "Active Campaign",
-				"image": "https://images.assets-landingi.com/content-dir/uploads/2017/08/01091050/active-campaign.png"
+				"image": "https://images.assets-landingi.com/content-dir/uploads/2017/08/01091050/active-campaign.png",
+				"url": "https://www.activecampaign.com/"
 			},
 			{ 
 				"name": "Quik Order",
-				"image": "QuikOrder"
+				"image": "QuikOrder",
+				"url": "https://www.quikorder.com/"
 			},
 			{ 
 				"name": "Hash Rocket",
-				"image": "https://hashrocket.com/hashrocket_logo.svg"
+				"image": "https://hashrocket.com/hashrocket_logo.svg",
+				"url": "https://hashrocket.com/"
 			},
 			{ 
 				"name": "Dragon Spears",
-				"image": "https://www.dragonspears.com/hs-fs/hubfs/images/ui/dragonspears-logo-alt-774x266px.png?t=1531254539273&width=774&name=dragonspears-logo-alt-774x266px.png"
+				"image": "https://www.dragonspears.com/hs-fs/hubfs/images/ui/dragonspears-logo-alt-774x266px.png?t=1531254539273&width=774&name=dragonspears-logo-alt-774x266px.png",
+				"url": "https://www.dragonspears.com/"
 			},
 			{ 
 				"name": "DraftBit",
-				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/draftbit.png"
+				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/draftbit.png",
+				"url": "https://draftbit.com/"
 			},
 			{ 
 				"name": "Next Capital",
-				"image": "https://thewealthmosaic.s3.amazonaws.com/media/Logo_NextCapital.png"
+				"image": "https://thewealthmosaic.s3.amazonaws.com/media/Logo_NextCapital.png",
+				"url": "https://nextcapital.com/"
 			}
 		]
       }

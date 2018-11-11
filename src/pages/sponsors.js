@@ -16,7 +16,7 @@ const SponsorsPage = ( {data} ) => {
 			return sponsorsArray.node.items.map((i,index) => (
 				<div className={`col-md-6 col-lg-3 ${styles.sponsorCard} ${tier === 'gold' ? 'col-lg-4' : 'col-lg-2'}`}>
 					<div className={`card border-0 transform-on-hover ${styles.cardImgContainer}`}>
-						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
+						<a className="lightbox" href={i.url} target="_blank"> 
 							<img style={[{width: tier === 'gold' ? '100%' : '75%'},styles.mobileLogo]} src={getImageUrl(i.image)} alt={`${i.name}`} className="card-img-top" />
 						</a>
 					</div>
@@ -96,6 +96,7 @@ export const query = graphql`
 					items {
 						name
 						image
+						url
 					}
 				}
 			}

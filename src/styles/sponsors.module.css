@@ -75,6 +75,18 @@
     padding-left: 10px;
 }
 
+.footer{
+    display: flex;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.footerBlurb {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 2em;
+}
 @media (max-width: 576px) {
 	.gallery-block .transform-on-hover:hover {
 	    transform: translateY(-10px) scale(1.02);

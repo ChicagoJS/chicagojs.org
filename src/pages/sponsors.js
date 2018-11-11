@@ -74,7 +74,7 @@ const SponsorsPage = ( {data} ) => {
 			<div className={`container ${styles.footer}`}>
 					<div className="row text-center">
 							<div className="heading">
-									<p className={styles.blurb}>
+									<p className={styles.footerBlurb}>
 										Interested in becoming a community sponsor?  
 										<a className={styles.contactUs} href="(Swap for link at one point)" target="_blank">
 										   Contact us here

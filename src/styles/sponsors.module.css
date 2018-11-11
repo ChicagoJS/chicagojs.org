@@ -75,10 +75,16 @@
     padding-left: 10px;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
 	.gallery-block .transform-on-hover:hover {
 	    transform: translateY(-10px) scale(1.02);
 	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+    }
+
+    .heading {
+        font-size: 4em;
+        font-weight: 2em;
+        color: #ffffff;
     }
 
     .sponsorCard {

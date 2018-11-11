@@ -14,14 +14,11 @@ const SponsorsPage = ( {data} ) => {
 		const sponsorsArray = data.allSponsorsDataJson.edges.find(data => data.node.title === tier);
 		if(sponsorsArray.node.items.length > 0) {
 			return sponsorsArray.node.items.map((i,index) => (
-				<div className={`col-md-6 col-lg-4 ${styles.sponsorCard}`}>
-					<div className="card border-0 transform-on-hover">
+				<div className={`col-md-6 col-lg-3 ${styles.sponsorCard} ${tier === 'gold' ? 'col-lg-4' : 'col-lg-2'}`}>
+					<div className={`card border-0 transform-on-hover ${styles.cardImgContainer}`}>
 						<a className="lightbox" href="https://www.amazon.com/" target="_blank"> {/*swap amazon url for company url at one point*/}
-							<img style={{height:100 ,width:300 }} src={getImageUrl(i.image)} alt="Card Image" className="card-img-top" />
+							<img style={[{width: tier === 'gold' ? '100%' : '75%'},styles.mobileLogo]} src={getImageUrl(i.image)} alt={`${i.name}`} className="card-img-top" />
 						</a>
-						<div className={`${styles.cardBody}`}>
-							<h6 className={styles.sponsorName}>{`${i.name}`}</h6>
-						</div>
 					</div>
 				</div>
 			));
@@ -69,10 +66,22 @@ const SponsorsPage = ( {data} ) => {
 					<div className={styles.headingContainer}>
 							<h2 className={styles.sponsorsLevel}>Silver</h2>
 					</div>
-					<div className="row" >
+					<div className={`row ${styles.rowStyling }`}>
 							{grabTieredSponsors('silver')}
 					</div>
 				</div> 
+			</div>
+			<div className={`container ${styles.footer}`}>
+					<div className="row text-center">
+							<div className="heading">
+									<p className={styles.blurb}>
+										Interested in becoming a community sponsor?  
+										<a className={styles.contactUs} href="(Swap for link at one point)" target="_blank">
+										   Contact us here
+										</a>
+									</p>
+							</div>
+					</div>
 			</div>
 		</div>
 	)

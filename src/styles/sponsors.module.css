@@ -38,9 +38,22 @@
     padding-top: 60px;
 }
 
+.rowStyling {
+    justify-content: center;
+}
+
 .sponsorCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.cardImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sponsorName {
@@ -49,30 +62,31 @@
 }
 
 .cardBody {
-    /* border-top: 5px solid #000000;    */
+    border-top: 5px solid #000000;   
     text-align: center;
 }
 
-/*Card colors */
-.platinum {
-    background-color: #e5e4e2;
+.footer {
+    border-top: 5px solid #000000;
+
 }
 
-.gold {
-    background-color: #ffd700;
-}
-
-.silver {
-    background-color: #534b4f;
-}
-
-.bronze {
-    background-color: #cd7f32;
+.contactUs{
+    padding-left: 10px;
 }
 
 @media (min-width: 576px) {
 	.gallery-block .transform-on-hover:hover {
 	    transform: translateY(-10px) scale(1.02);
 	    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important; 
+    }
+
+    .sponsorCard {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    .mobileLogo {
+        width: 100%;
     }
 }

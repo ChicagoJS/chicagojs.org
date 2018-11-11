@@ -27,7 +27,7 @@
 		"items": [
 			{ 
 				"name": "Fraight Ai",
-				"image": "https://res.cloudinary.com/chicagojs/image/upload/co_rgb:000000,e_colorize:100,f_auto,w_270/v1537038153/2018sponsors/fraightai.png"
+				"image": "https://workablehr.s3.amazonaws.com/uploads/account/logo/186514/large_fraight_black.png"
 			},
 			{ 
 				"name": "One North",
@@ -43,7 +43,7 @@
 			},
 			{ 
 				"name": "Active Campaign",
-				"image": "active campaign"
+				"image": "https://images.assets-landingi.com/content-dir/uploads/2017/08/01091050/active-campaign.png"
 			},
 			{ 
 				"name": "Quik Order",
@@ -51,11 +51,11 @@
 			},
 			{ 
 				"name": "Hash Rocket",
-				"image": "HashRocket"
+				"image": "https://hashrocket.com/hashrocket_logo.svg"
 			},
 			{ 
 				"name": "Dragon Spears",
-				"image": "DragonSpears"
+				"image": "https://www.dragonspears.com/hs-fs/hubfs/images/ui/dragonspears-logo-alt-774x266px.png?t=1531254539273&width=774&name=dragonspears-logo-alt-774x266px.png"
 			},
 			{ 
 				"name": "DraftBit",
@@ -63,7 +63,7 @@
 			},
 			{ 
 				"name": "Next Capital",
-				"image": "Next Capital"
+				"image": "https://thewealthmosaic.s3.amazonaws.com/media/Logo_NextCapital.png"
 			}
 		]
       }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import styles from "../styles/sponsors.module.css"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 const SponsorsPage = ( {data} ) => {
 
@@ -39,14 +39,14 @@ const SponsorsPage = ( {data} ) => {
 			<div className={`jumbotron jumbotron-fluid ${styles.jumbotron}`}>
 					<div className="container">
 							<div className="row justify-content-center">
-									<h1 className={styles.heading}>Sponsors</h1>
+									<h1 className={`font-weight-bold ${styles.heading}`}>Sponsors</h1>
 							</div>
 					</div>
 			</div>
 			<div className="container">
-					<div className="row text-center">
+					<div className="text-center">
 							<div className="heading">
-									<p className={styles.blurb}>
+									<p className={`lead font-weight-bold`}>
 										All at ChicagoJS would like to thank our sponsors for their generosity! Without you guys none of this would
 										be possible.
 									</p>
@@ -72,13 +72,13 @@ const SponsorsPage = ( {data} ) => {
 				</div> 
 			</div>
 			<div className={`container ${styles.footer}`}>
-					<div className="row text-center">
+					<div className="text-center">
 							<div className="heading">
-									<p className={styles.footerBlurb}>
-										Interested in becoming a community sponsor?  
-										<a className={styles.contactUs} href="(Swap for link at one point)" target="_blank">
-										   Contact us here
-										</a>
+									<p className="font-weight-bold lead">
+										Interested in becoming a community sponsor?
+										<Link to="/contacts" className={styles.contactUs}>
+											Contact Us
+										</Link>  
 									</p>
 							</div>
 					</div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 import styles from "../styles/sponsors.module.css"
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 const SponsorsPage = ( {data} ) => {
 
@@ -70,18 +70,6 @@ const SponsorsPage = ( {data} ) => {
 							{grabTieredSponsors('silver')}
 					</div>
 				</div> 
-			</div>
-			<div className={`container ${styles.footer}`}>
-					<div className="text-center">
-							<div className="heading">
-									<p className="font-weight-bold lead">
-										Interested in becoming a community sponsor?
-										<Link to="/contacts" className={styles.contactUs}>
-											Contact Us
-										</Link>  
-									</p>
-							</div>
-					</div>
 			</div>
 		</div>
 	)

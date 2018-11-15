@@ -2966,6 +2966,11 @@ clone@^1.0.0:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
+cloudinary-microurl@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/cloudinary-microurl/-/cloudinary-microurl-1.4.0.tgz#37ab057811ad48b503476dc993a34111866ac49a"
+  integrity sha512-oUYOXF8IF5DZ7K6uqsSY/8BJrOUOp0HlyYw2J7v8J53Ky2gq8/oMELlU5VJNxa5X+GFM9DMa+iP2pk64ppfzGw==
+
 co@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/co/-/co-3.1.0.tgz#4ea54ea5a08938153185e15210c68d9092bc1b78"

@@ -1,0 +1,11 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 60px;
+
+  /* Margin bottom by footer height */
+  padding-bottom: 60px;
+}

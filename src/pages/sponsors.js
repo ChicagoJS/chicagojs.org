@@ -26,33 +26,15 @@ const SponsorsPage = ( {data} ) => {
 	}
 
 	return (
-		<div className="page-container">
+		<div>
 			<Helmet>
 					<title>Sponsors</title>
 					<meta name="description" content="Sponsors for ChicagoJS" />
 					<meta name="keywords" content="Sponsors, ChicagoJS, Javascript,Js" />
 					<meta name="author" content="Sebastian Kurpiel" />
-					{/* Bootstrap style sheet */}
 					<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
 					<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"></link>    
 			</Helmet>
-			<div className={`jumbotron jumbotron-fluid ${styles.jumbotron}`}>
-					<div className="container">
-							<div className="row justify-content-center">
-									<h1 className={`font-weight-bold ${styles.heading}`}>Sponsors</h1>
-							</div>
-					</div>
-			</div>
-			<div className="container">
-					<div className="text-center">
-							<div className="heading">
-									<p className={`lead font-weight-bold`}>
-										All at ChicagoJS would like to thank our sponsors for their generosity! Without you guys none of this would
-										be possible.
-									</p>
-							</div>
-					</div>
-			</div>
 			<div className={`gallery-block `}>
 				<div className="container">
 					<div className={styles.headingContainer}>

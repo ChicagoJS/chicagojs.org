@@ -1,32 +1,29 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/Layout'
+
+const LANGUAGES = ['GatsbyJS', 'GraphQL', 'React', 'Emotion.sh', 'Node', 'ExpressJs']
 
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          textAlign: 'center',
-          marginTop: 40
-        }}>
-        <h1>ChicagoJS.org</h1>
-        <h2>Currently under active development!</h2>
-        <a href="https://github.com/chicagojs/chicagojs.org">ChicagoJS on Github</a>
-        <br/>
-        <p>If you want to learn any of these technologies, please check out our issues page on Github!</p>
-        <ul>
-          <li>GatsbyJS</li>
-          <li>GraphQL</li>
-          <li>React</li>
-          <li>Emotion.sh</li>
-          <li>Node</li>
-          <li>ExpressJS</li>
-        </ul>
-        <br/>
-        <Link to="/code-of-conduct">Code of Conduct</Link>
-      </div>
+      <Layout title="Under Construction">
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">ChicagoJS</h1>
+            <p className="lead">
+              ChicagoJS is currently under development. If you'd like to help,{' '}
+              <a href="https://github.com/chicagojs/chicagojs.org">open a PR!</a>
+            </p>
+            <p>If you want to learn any of these technologies, please check out our issues page on Github!</p>
+            <ul>
+              {LANGUAGES.map(l => (
+                <li>{l}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Layout>
     )
   }
 }

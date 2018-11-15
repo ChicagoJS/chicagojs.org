@@ -21,6 +21,13 @@ module.exports = {
         plugins: []
       }
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://chicagojsconf.us16.list-manage.com/subscribe/post?u=55c1be8b418eb495e19ef9e2e&amp;id=52a92821ce'
+      }
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

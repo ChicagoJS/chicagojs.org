@@ -6,6 +6,7 @@
   "dependencies": {
     "cloudinary-microurl": "^1.4.0",
     "gatsby": "^2.0.31",
+    "gatsby-plugin-mailchimp": "https://github.com/benjaminhoffman/gatsby-plugin-mailchimp.git#gatsby-v2",
     "gatsby-plugin-netlify": "^2.0.2",
     "gatsby-plugin-netlify-cms": "^3.0.4",
     "gatsby-plugin-react-helmet": "^3.0.0",

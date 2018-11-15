@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import MailingListForm from './MailingListForm'
 import Navbar from './Navbar'
 import GlobalFooter from './GlobalFooter'
 import './Layout.css'
@@ -21,5 +22,6 @@ export default ({ children, title, hideNavbar = false, hideFooter = false, class
     {!hideNavbar && <Navbar />}
     <div>{children}</div>
     {!hideFooter && <GlobalFooter />}
+    <MailingListForm />
   </React.Fragment>
 )

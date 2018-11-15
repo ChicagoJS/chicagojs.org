@@ -1,16 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/Layout'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          textAlign: 'center',
-          marginTop: 40
-        }}>
+      <Layout title="Under Construction">
         <h1>ChicagoJS.org</h1>
         <h2>Currently under active development!</h2>
         <a href="https://github.com/chicagojs/chicagojs.org">ChicagoJS on Github</a>
@@ -26,7 +21,7 @@ export default class IndexPage extends React.Component {
         </ul>
         <br/>
         <Link to="/code-of-conduct">Code of Conduct</Link>
-      </div>
+    </Layout>
     )
   }
 }

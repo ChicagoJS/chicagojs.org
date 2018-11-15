@@ -1,8 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Navbar from './Navbar'
+import GlobalFooter from './GlobalFooter'
+import "./Layout.css"
 
-export default ({ children, title, hideNavbar = false, className = '' }) => (
+export default ({ children, title, hideNavbar = false, hideFooter = false, className = '' }) => (
   <React.Fragment>
     <Helmet titleTemplate="%s | ChicagoJS" defaultTitle="ChicagoJS">
        <html lang="en" />
@@ -13,5 +15,6 @@ export default ({ children, title, hideNavbar = false, className = '' }) => (
     </Helmet>
     {!hideNavbar && <Navbar />}
     <div>{children}</div>
+    {!hideFooter && <GlobalFooter />}
   </React.Fragment>
 );

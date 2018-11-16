@@ -1,17 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
-import PageHeader from '../../components/PageHeader'
-import { isValidUrl } from '../../utils'
+import { isValidUrl, getCloudinaryImage } from '../../utils'
 import './sponsors.css'
 
-const SponsorsPage = ({ data }) => {
-  const getImageUrl = companyName => {
-    return isValidUrl(companyName)
-      ? companyName
-      : 'https://res.cloudinary.com/chicagojs/image/upload/2018Sponsors/' + companyName
-  }
+const getImageUrl = companyName => {
+  return isValidUrl(companyName) ? companyName : getCloudinaryImage(`2018Sponsors/${companyName}`)
+}
 
+const SponsorsPage = ({ data }) => {
   // const grabTieredSponsors = (tier) => {
   // 	const sponsorsArray = data.allSponsorsDataJson.edges.find(data => data.node.title === tier);
   // 	if(sponsorsArray.node.items.length > 0) {

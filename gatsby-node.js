@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -7,10 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___title] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }, limit: 1000) {
         edges {
           node {
             frontmatter {
@@ -29,7 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: mdTemplate,
-        context: {},
+        context: {}
       })
     })
   })

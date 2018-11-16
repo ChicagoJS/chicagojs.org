@@ -8,7 +8,7 @@ const getImageUrl = companyName => {
   return isValidUrl(companyName) ? companyName : getCloudinaryImage(`2018Sponsors/${companyName}`)
 }
 
-const SponsorRow = ({ node: { title, items: sponsors } }) => {
+const SponsorRow = ({ title, items: sponsors }) => {
   let className = title === 'gold' ? 'col-6 col-md-4' : 'col-4'
   return (
     <div className="container">
@@ -43,7 +43,7 @@ const SponsorsPage = ({ data }) => {
       }>
       <div className="gallery-block">
         {sponsors.map(level => (
-          <SponsorRow {...level} />
+          <SponsorRow {...level.node} />
         ))}
       </div>
     </Layout>

@@ -22,7 +22,6 @@ export default class MeetupsPage extends React.Component {
     const meetups = get(this.props, 'data.allLocalMeetupsJson.edges', [])
     return (
       <Layout title="Local Meetups">
-        <h1 className="text-center mb-4">Local Meetups</h1>
         <div className="container">
           <div className="row">
             {meetups.map(m => (

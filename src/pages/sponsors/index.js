@@ -2,6 +2,7 @@ import React from 'react'
 import './sponsors.css'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import PageHeader from '../../components/PageHeader'
 
 const SponsorsPage = ({ data }) => {
   const getImageUrl = companyName => {
@@ -28,6 +29,7 @@ const SponsorsPage = ({ data }) => {
 
   return (
     <Layout title="Sponsors">
+      <PageHeader title={'Sponsors'} titleColor={'#ffffff'} />
       {/* <div className="gallery-block">
 				<div className="container">
 					<div className="headingContainer">

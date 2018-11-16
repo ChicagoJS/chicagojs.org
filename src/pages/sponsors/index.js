@@ -3,7 +3,7 @@ import './sponsors.css'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageHeader from '../../components/PageHeader'
-import { isValidUrl } from '../../utils/index'
+import { isValidUrl } from '../../utils'
 
 const SponsorsPage = ({ data }) => {
   const getImageUrl = companyName => {

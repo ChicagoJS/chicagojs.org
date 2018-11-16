@@ -1,7 +1,7 @@
 import React from 'react'
 import './PageHeader.css'
 import PropType from 'prop-types'
-import { isValidUrl } from '../utils/index'
+import { isValidUrl } from '../utils'
 
 const PageHeader = props => {
   const generateBackground = background => ({

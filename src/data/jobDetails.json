@@ -1,0 +1,14 @@
+[
+  {
+    "company": "Drafbit",
+    "companySite": "https://www.draftbit.com",
+    "position": "Engineer",
+    "datePosted": "Today",
+    "location": "Chicago",
+    "positionType": "Full Time",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan justo non mauris commodo interdum. Integer varius dolor sed magna ornare suscipit. Praesent pulvinar, felis ac porta hendrerit, nisi ipsum rutrum elit, id porttitor sapien diam non arcu. Maecenas sed rutrum arcu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a luctus risus. Nam sed finibus mauris. Etiam lacinia erat sed ultricies aliquet. Pellentesque convallis nunc a molestie dictum. Nulla eu dolor nisl. Quisque dui nulla, fringilla et pulvinar euismod, molestie id nulla.",
+    "responsibilities": ["string1", "string2", "responsibility goes here"],
+    "qualifications": ["quality 1", "quality 2", "quality 3"],
+    "applicationLink": "https://google.com"
+  }
+]

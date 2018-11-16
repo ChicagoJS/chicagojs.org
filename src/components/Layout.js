@@ -22,6 +22,5 @@ export default ({ children, title, hideNavbar = false, hideFooter = false, class
     {!hideNavbar && <Navbar />}
     <div>{children}</div>
     {!hideFooter && <GlobalFooter />}
-    <MailingListForm />
   </React.Fragment>
 )

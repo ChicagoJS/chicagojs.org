@@ -3,18 +3,18 @@ import './PageHeader.css'
 import PropType from 'prop-types'
 import { isValidUrl } from '../utils'
 
-const PageHeader = props => {
+const PageHeader = ({ background, title, titleColor }) => {
   const generateBackground = background => ({
     background: isValidUrl(background) ? `url(${background})` : background
   })
 
   return (
-    <div className="jumbotron jumbotron-fluid jumbotron" style={generateBackground(props.background)}>
+    <div className="jumbotron jumbotron-fluid jumbotron" style={generateBackground(background)}>
       <div className="container">
         <div className="row justify-content-center">
-          <h1 className="heading" style={{ color: props.titleColor }}>
-            {props.title}
-            {console.log(generateBackground(props.background))}
+          <h1 className="heading" style={{ color: titleColor }}>
+            {title}
+            {console.log(generateBackground(background))}
           </h1>
         </div>
       </div>

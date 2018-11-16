@@ -9,10 +9,10 @@ const PageHeader = ({ background, title, titleColor }) => {
   })
 
   return (
-    <div className="jumbotron jumbotron-fluid jumbotron" style={generateBackground(background)}>
+    <div className="jumbotron jumbotron-fluid PageHeaderBackground" style={generateBackground(background)}>
       <div className="container">
-        <div className="row justify-content-center">
-          <h1 className="heading" style={{ color: titleColor }}>
+        <div className="text-center">
+          <h1 className="PageHeader" style={{ color: titleColor }}>
             {title}
             {console.log(generateBackground(background))}
           </h1>

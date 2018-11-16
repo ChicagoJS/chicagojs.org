@@ -12,6 +12,7 @@ static/admin/*.bundle.*
 *.swp
 *.swo
 *.kate-swp
+.editorconfig
 
 # File Managers
 .DS_Store

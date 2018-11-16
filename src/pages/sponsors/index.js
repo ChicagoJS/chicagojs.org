@@ -3,11 +3,11 @@ import './sponsors.css'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageHeader from '../../components/PageHeader'
+import { isValidUrl } from '../../utils/index'
 
 const SponsorsPage = ({ data }) => {
   const getImageUrl = companyName => {
-    const URLRegex = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/
-    return URLRegex.test(companyName)
+    return isValidUrl(companyName)
       ? companyName
       : 'https://res.cloudinary.com/chicagojs/image/upload/2018Sponsors/' + companyName
   }

@@ -14,7 +14,6 @@ const PageHeader = ({ background, title, titleColor }) => {
         <div className="text-center">
           <h1 className="PageHeader" style={{ color: titleColor }}>
             {title}
-            {console.log(generateBackground(background))}
           </h1>
         </div>
       </div>

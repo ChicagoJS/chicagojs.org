@@ -1,9 +1,9 @@
 import React from 'react'
-import './sponsors.css'
 import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import PageHeader from '../../components/PageHeader'
 import { isValidUrl } from '../../utils'
+import './sponsors.css'
 
 const SponsorsPage = ({ data }) => {
   const getImageUrl = companyName => {
@@ -28,14 +28,12 @@ const SponsorsPage = ({ data }) => {
   // }
 
   return (
-    <Layout title="Sponsors">
-      <PageHeader
-        title={'Sponsors'}
-        titleColor={'#ffffff'}
-        background={
-          'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0471f46a1cda51342fdecf9a8c42349f&auto=format&fit=crop&w=1852&q=80'
-        }
-      />
+    <Layout
+      title="Sponsors"
+      titleColor={'#ffffff'}
+      background={
+        'https://images.unsplash.com/photo-1519999482648-25049ddd37b1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0471f46a1cda51342fdecf9a8c42349f&auto=format&fit=crop&w=1852&q=80'
+      }>
       {/* <div className="gallery-block">
 				<div className="container">
 					<div className="headingContainer">
@@ -53,7 +51,7 @@ const SponsorsPage = ({ data }) => {
 							{grabTieredSponsors('silver')}
 					</div>
 				</div> 
-			</Layout> */}
+			</div> */}
     </Layout>
   )
 }

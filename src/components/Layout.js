@@ -2,10 +2,20 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import MailingListForm from './MailingListForm'
 import Navbar from './Navbar'
+import PageHeader from './PageHeader'
 import GlobalFooter from './GlobalFooter'
 import './Layout.css'
 
-export default ({ children, title, hideNavbar = false, hideFooter = false, className = '' }) => (
+export default ({
+  children,
+  title,
+  titleColor,
+  background,
+  hideNavbar = false,
+  hideFooter = false,
+  hidePageHeader = false,
+  className = ''
+}) => (
   <React.Fragment>
     <Helmet titleTemplate="%s | ChicagoJS" defaultTitle="ChicagoJS">
       <html lang="en" />
@@ -20,6 +30,7 @@ export default ({ children, title, hideNavbar = false, hideFooter = false, class
       <title>{title}</title>
     </Helmet>
     {!hideNavbar && <Navbar />}
+    {!hidePageHeader && <PageHeader title={title} titleColor={titleColor} background={background} />}
     <div>{children}</div>
     {!hideFooter && <GlobalFooter />}
     <MailingListForm />

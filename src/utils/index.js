@@ -1,4 +1,5 @@
 const cloudinaryUrl = require('cloudinary-microurl')
+const urlRegex = require('url-regex')
 
 export const getCloudinaryImage = (name, options) => {
   return cloudinaryUrl(name, {
@@ -10,4 +11,8 @@ export const getCloudinaryImage = (name, options) => {
     quality: 80,
     ...options
   })
+}
+
+export const isValidUrl = url => {
+  return urlRegex().test(url)
 }

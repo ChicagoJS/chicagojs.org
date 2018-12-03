@@ -47,8 +47,8 @@ export default () => (
       <ul className="list-unstyled list-inline mp-0">
         {FOOTER_LINKS.map(link => (
           <li className="list-inline-item">
-            <a className="m-1" href={link.url}>
-              <img width="24" height="24" src={link.image} title={link.title} />
+            <a rel="no-follow" className="m-1" href={link.url}>
+              <img width="24" height="24" src={link.image} title={`ChicagoJS on ${link.title}`} />
             </a>
           </li>
         ))}

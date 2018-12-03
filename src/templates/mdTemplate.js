@@ -9,7 +9,6 @@ export default function Template({ data }) {
   return (
     <Layout title="Code of Conduct">
       <div className="container my-4">
-        <h1 className="text-center mb-2">{frontmatter.title}</h1>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>

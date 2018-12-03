@@ -1,11 +1,15 @@
 [
-    {
-        "company": "Drafbit",
-        "position":  "Engineer",
-        "datePosted": "Today",
-        "positionType": "Full Time",
-        "technologies": ["Javascript", "Node.js", "React.js", "React Native"],
-        "neighborhood": "Chicago",
-        "perks": ["$60 - $110k", "0.25% - 2.0%"]
-    }
+  {
+    "logoUrl": "https://draftbit.com/logo.svg",
+    "applyUrl": "https://draftbit.com/apply",
+    "address": "343 W Erie #310 Chicago, IL 60654",
+    "featured": true,
+    "position": "Platform Engineer",
+    "company": "Drafbit",
+    "datePosted": "2018-12-03T15:18:31.433Z",
+    "neighborhood": "River North",
+    "technologies": ["Javascript", "Node.js", "React.js", "React Native"],
+    "benefits": ["Health Insurance", "401k", "Unlimited Vacation Policy", "Dental Insurance"],
+    "description": "Draftbit is hiring"
+  }
 ]

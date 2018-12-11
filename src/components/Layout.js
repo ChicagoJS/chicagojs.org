@@ -11,6 +11,7 @@ export default ({
   title,
   titleColor,
   background,
+  bodyBackground = null,
   hideNavbar = false,
   hideFooter = false,
   hidePageHeader = false,
@@ -31,7 +32,11 @@ export default ({
     </Helmet>
     {!hideNavbar && <Navbar />}
     {!hidePageHeader && <PageHeader title={title} titleColor={titleColor} background={background} />}
-    <div style={{ marginBottom: '5rem' }}>{children}</div>
+    <div className={'bodyBackground'} style={{ background: `url(${bodyBackground})` }}>
+      {children}
+    </div>
     {!hideFooter && <GlobalFooter />}
   </React.Fragment>
 )
+
+// style={{background: 'url(../assets/img/shattered-island.gif',backgroundSize: 'cover'}}

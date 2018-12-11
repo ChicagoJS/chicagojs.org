@@ -1,0 +1,51 @@
+.Job-Contianer {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.Post-container {
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  background-color: #f0f2fa;
+  padding: 0.5em;
+  border-radius: 5px;
+  border-left: solid 5px #b20000;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.Post-type-container {
+  height: 100%;
+  width: 0.2%;
+  background-color: #000000;
+}
+
+.Post-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+.Post-logo {
+  display: block;
+  height: 8em;
+  width: 8em;
+}
+
+.Post-info {
+  /*for seperating the logo*/
+}
+
+.Post-detailsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.Post-job-title {
+  margin-right: 1em;
+}

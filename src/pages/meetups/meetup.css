@@ -1,0 +1,15 @@
+.meetup .card {
+  min-height: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .meetup .card {
+    min-height: 250px;
+  }
+}
+
+@media screen and (max-width: 763px) {
+  .meetup .card {
+    min-height: 300px;
+  }
+}

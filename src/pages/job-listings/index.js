@@ -6,7 +6,7 @@ import './job-listings.css'
 const JobPost = ({
   position,
   company,
-  logourl,
+  logoUrl,
   description,
   datePosted,
   positionType,
@@ -18,7 +18,7 @@ const JobPost = ({
     <div className={'Post-container'}>
       {/* add a prop for thisborder-left: solid 5px #000000; */}
       <div className={'Post-logo-container'}>
-        <img className="Post-logo rounded-circle" src={`${logourl}`} alt={`Logo for ${company} `} />
+        <img className="Post-logo rounded-circle" src={`${logoUrl}`} alt={`Logo for ${company} `} />
       </div>
       <div className={'Post-info'}>
         <h1 className={'Post-title'}>{position}</h1>

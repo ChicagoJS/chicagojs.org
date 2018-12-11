@@ -25,13 +25,13 @@ export default ({
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
       <title>{title}</title>
     </Helmet>
     {!hideNavbar && <Navbar />}
     {!hidePageHeader && <PageHeader title={title} titleColor={titleColor} background={background} />}
-    <div>{children}</div>
+    <div style={{ marginBottom: '5rem' }}>{children}</div>
     {!hideFooter && <GlobalFooter />}
   </React.Fragment>
 )

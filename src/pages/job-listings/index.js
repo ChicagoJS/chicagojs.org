@@ -21,7 +21,6 @@ export const query = graphql`
           neighborhood
           position
           datePosted
-          positionType
         }
       }
     }

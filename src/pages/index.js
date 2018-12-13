@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import './IndexPage.css'
 
 const LANGUAGES = ['GatsbyJS', 'GraphQL', 'React', 'Emotion.sh', 'Node', 'ExpressJs']
 
-export default () => (
-  <Layout title="Under Construction">
-    <div className="jumbotron jumbotron-fluid">
+const IndexPage = () => (
+  <Layout hidePageHeader>
+    <div className="jumbotron jumbotron-fluid index-page-body">
       <div className="container">
         <h1 className="display-4">ChicagoJS</h1>
         <p className="lead">
@@ -22,3 +23,5 @@ export default () => (
     </div>
   </Layout>
 )
+
+export default IndexPage

@@ -1,0 +1,18 @@
+.index-page-body {
+  background-image: linear-gradient(to bottom right, rgba(61, 136, 180, 0.7), rgba(35, 67, 114, 0.4)),
+    url('../images/banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 150px);
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+.index-page-body .container {
+  color: white;
+  margin-left: 1rem;
+}
+.index-page-body a,
+.index-page-body a:hover {
+  color: RGB(253, 29, 0);
+}

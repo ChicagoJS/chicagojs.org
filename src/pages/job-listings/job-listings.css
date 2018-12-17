@@ -1,7 +1,13 @@
 .Job-Contianer {
-  display: flex;
-  flex-wrap: nowrap;
+  padding: 1em;
+  background-color: #ffffff;
 }
+
+.Job-Contianer-title {
+  border-bottom: 2px solid #d3d3d3;
+  margin-bottom: 1.2em;
+}
+
 .Post-container {
   display: flex;
   flex-direction: row;

@@ -16,7 +16,7 @@ const JobPost = ({
 }) => {
   return (
     <div className={'Post-container'}>
-      <div clasName={'Post-logo-container'}>
+      <div className={'Post-logo-container'}>
         <img className="Post-logo rounded-circle" src={`${logoUrl}`} alt={`Logo for ${company} `} />
       </div>
       <div className={'Post-info'}>

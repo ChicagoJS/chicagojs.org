@@ -77,7 +77,6 @@ export const query = graphql`
           neighborhood
           position
           datePosted
-          position
           description
           logoUrl
         }

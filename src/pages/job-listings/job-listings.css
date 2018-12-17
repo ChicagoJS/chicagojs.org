@@ -55,6 +55,7 @@
 .Post-sub-info {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .Post-info-left {

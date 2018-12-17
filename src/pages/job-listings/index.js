@@ -14,6 +14,8 @@ const JobPost = ({
   neighborhood,
   perks
 }) => {
+  let date = new Date(datePosted)
+  let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
     <div className={'Post-container'}>
       <div className={'Post-logo-container'}>
@@ -35,7 +37,7 @@ const JobPost = ({
             </div>
           </div>
           <div className={'Post-info-right'}>
-            <h1 style={{ fontSize: '1em' }}>{datePosted}</h1>
+            <h1 style={{ fontSize: '1em' }}>{convertedDate}</h1>
           </div>
         </div>
         <div className={'Post-descriptionContainer'}>

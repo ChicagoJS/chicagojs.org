@@ -44,7 +44,10 @@ const JobListingsPage = ({ data }) => {
       background={
         'https://images.unsplash.com/photo-1521901581118-62fa7443883d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       }>
-      <div className={'Job-Contianer'}>
+      <div className={'row'}>
+        <div className={'col text-center'}>
+          <h1>center</h1>
+        </div>
         {jobPosts.map(job => (
           <JobPost {...job.node} />
         ))}

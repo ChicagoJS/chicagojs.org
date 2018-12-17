@@ -16,15 +16,21 @@ const JobPost = ({
 }) => {
   return (
     <div className={'Post-container'}>
-      {/* add a prop for thisborder-left: solid 5px #000000; */}
-      <div className={'Post-logo-container'}>
+      <div clasName={'Post-logo-container'}>
         <img className="Post-logo rounded-circle" src={`${logoUrl}`} alt={`Logo for ${company} `} />
       </div>
       <div className={'Post-info'}>
-        <h1 className={'Post-title'}>{position}</h1>
-        <div className={'Post-detailsContainer'}>
-          <h2 className={'Post-job-title'}>{company}</h2>
-          <h2 className={'Post-location'}>{neighborhood}</h2>
+        <div className={'Post-info-header'}>
+          <div className={'Post-info-left'}>
+            <h1 className={'Post-title'}>{position}</h1>
+            <div className={'Post-sub-info'}>
+              <h2 className={'Post-job-title'}>{company}</h2>
+              <h2 className={'Post-location'}>{neighborhood}</h2>
+            </div>
+          </div>
+          <div className={'Post-info-right'}>
+            <h1 style={{ fontSize: '1em' }}>{datePosted}</h1>
+          </div>
         </div>
         <div className={'Post-descriptionContainer'}>
           <p className={'Post-descriptionText'}>{description}</p>
@@ -36,7 +42,6 @@ const JobPost = ({
 
 const JobListingsPage = ({ data }) => {
   let jobPosts = data.allJobListingsJson.edges
-  console.log(jobPosts)
   return (
     <Layout
       title="Jobs"

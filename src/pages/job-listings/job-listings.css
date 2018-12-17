@@ -11,7 +11,6 @@
 .Post-container {
   display: flex;
   flex-direction: row;
-  align-content: left;
   background-color: #f0f2fa;
   padding: 0.5em;
   border-radius: 5px;
@@ -21,9 +20,9 @@
 }
 
 .Post-type-container {
-  height: 100%;
+  /* height: 100%;
   width: 0.2%;
-  background-color: #000000;
+  background-color: #000000; */
 }
 
 .Post-logo-container {
@@ -40,14 +39,35 @@
 }
 
 .Post-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  width: 100%;
   /*for seperating the logo*/
 }
 
-.Post-detailsContainer {
+.Post-info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Post-sub-info {
   display: flex;
   flex-direction: row;
 }
 
+.Post-info-left {
+}
+.Post-info-right {
+  text-align: end;
+}
+
+.Post-detailsContainer {
+  /* display: flex;
+  flex-direction: row; */
+}
+
 .Post-job-title {
-  margin-right: 1em;
+  /* margin-right: 1em; */
 }

@@ -47,10 +47,12 @@ const JobListingsPage = ({ data }) => {
       <div className={'row'}>
         <div className={'col text-center'}>
           <h1>center</h1>
+          <div className={'col-4 mx-auto'}>
+            {jobPosts.map(job => (
+              <JobPost {...job.node} />
+            ))}
+          </div>
         </div>
-        {jobPosts.map(job => (
-          <JobPost {...job.node} />
-        ))}
       </div>
     </Layout>
   )

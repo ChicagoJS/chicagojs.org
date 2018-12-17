@@ -1,5 +1,6 @@
 .Job-Contianer {
-  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .Post-container {
   display: flex;

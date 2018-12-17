@@ -24,8 +24,14 @@ const JobPost = ({
           <div className={'Post-info-left'}>
             <h1 className={'Post-title'}>{position}</h1>
             <div className={'Post-sub-info'}>
-              <h2 className={'Post-job-title'}>{company}</h2>
-              <h2 className={'Post-location'}>{neighborhood}</h2>
+              <h2 className={'Post-company Post-icon'}>
+                <i className={'fas fa-briefcase Post-icon'} />
+                {company}
+              </h2>
+              <h2 className={'Post-location'}>
+                <i className={'fas fa-map-pin Post-icon'} />
+                {neighborhood}
+              </h2>
             </div>
           </div>
           <div className={'Post-info-right'}>

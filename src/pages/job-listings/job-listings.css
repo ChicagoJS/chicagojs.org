@@ -20,9 +20,6 @@
 }
 
 .Post-type-container {
-  /* height: 100%;
-  width: 0.2%;
-  background-color: #000000; */
 }
 
 .Post-logo-container {
@@ -52,6 +49,10 @@
   justify-content: space-between;
 }
 
+.Post-title {
+  font-size: 1.5em;
+}
+
 .Post-sub-info {
   display: flex;
   flex-direction: row;
@@ -65,10 +66,17 @@
 }
 
 .Post-detailsContainer {
-  /* display: flex;
-  flex-direction: row; */
 }
 
-.Post-job-title {
-  /* margin-right: 1em; */
+.Post-icon {
+  margin-right: 0.2em;
+}
+
+.Post-company {
+  font-size: 1.2em;
+  margin-right: 1em;
+}
+
+.Post-location {
+  font-size: 1.2em;
 }

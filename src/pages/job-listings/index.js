@@ -18,21 +18,21 @@ const JobPost = ({
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
     <li className="media mb-4 p-2">
-      <img
-        width="80"
-        height="80"
-        class="rounded mr-3"
-        src="https://images.unsplash.com/photo-1544434568-2534a316a730?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
-        alt="Generic placeholder image"
-      />
+      <img width="80" height="80" class="rounded mr-3" src={logoUrl} alt={`Logo for ${company}`} />
       <div className="media-body">
         <div className="d-flex flex-row justify-content-between">
           <h5 className="mt-0 mb-1">{position}</h5>
           <span>{convertedDate}</span>
         </div>
         <ul className="list-unstyled list-inline">
-          <li className="list-inline-item font-weight-bold">{company}</li>
-          <li className="list-inline-item font-weight-bold">{neighborhood}</li>
+          <li className="list-inline-item font-weight-bold">
+            {' '}
+            <i className="fas fa-briefcase" /> {company}
+          </li>
+          <li className="list-inline-item font-weight-bold">
+            {' '}
+            <i className="fas fa-map-pin" /> {neighborhood}
+          </li>
         </ul>
         {description}
       </div>

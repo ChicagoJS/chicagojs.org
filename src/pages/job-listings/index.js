@@ -17,34 +17,26 @@ const JobPost = ({
   let date = new Date(datePosted)
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
-    <div className={'Post-container'}>
-      <div className={'Post-logo-container'}>
-        <img className="Post-logo rounded-circle" src={`${logoUrl}`} alt={`Logo for ${company} `} />
-      </div>
-      <div className={'Post-info'}>
-        <div className={'Post-info-header'}>
-          <div className={'Post-info-left'}>
-            <h1 className={'Post-title'}>{position}</h1>
-            <div className={'Post-sub-info'}>
-              <h2 className={'Post-company Post-icon'}>
-                <i className={'fas fa-briefcase Post-icon'} />
-                {company}
-              </h2>
-              <h2 className={'Post-location'}>
-                <i className={'fas fa-map-pin Post-icon'} />
-                {neighborhood}
-              </h2>
-            </div>
-          </div>
-          <div className={'Post-info-right'}>
-            <h1 style={{ fontSize: '1em' }}>{convertedDate}</h1>
-          </div>
+    <li className="media mb-4 p-2">
+      <img
+        width="80"
+        height="80"
+        class="rounded mr-3"
+        src="https://images.unsplash.com/photo-1544434568-2534a316a730?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
+        alt="Generic placeholder image"
+      />
+      <div className="media-body">
+        <div className="d-flex flex-row justify-content-between">
+          <h5 className="mt-0 mb-1">{position}</h5>
+          <span>{convertedDate}</span>
         </div>
-        <div className={'Post-descriptionContainer'}>
-          <p className={'Post-descriptionText'}>{description}</p>
-        </div>
+        <ul className="list-unstyled list-inline">
+          <li className="list-inline-item font-weight-bold">{company}</li>
+          <li className="list-inline-item font-weight-bold">{neighborhood}</li>
+        </ul>
+        {description}
       </div>
-    </div>
+    </li>
   )
 }
 
@@ -65,9 +57,11 @@ const JobListingsPage = ({ data }) => {
         </div>
         <div className={'row'}>
           <div className={'col-md-10 col-sm-2 mx-auto'}>
-            {jobPosts.map(job => (
-              <JobPost {...job.node} />
-            ))}
+            <ul class="list-unstyled">
+              {jobPosts.map(job => (
+                <JobPost {...job.node} />
+              ))}
+            </ul>
           </div>
         </div>
       </div>

@@ -18,7 +18,9 @@ const SponsorRow = ({ title, items: sponsors }) => {
       <div>
         <div className="row rowStyling">
           {sponsors.map(sponsor => (
-            <div className={`col-md-6 col-lg-3 sponsorCard ${title === 'gold' ? 'col-lg-4' : 'col-lg-2'}`}>
+            <div
+              className={`col-md-6 col-lg-3 sponsorCard ${title === 'gold' ? 'col-lg-4' : 'col-lg-2'}`}
+              key={sponsor.name.replace(/\s/g, '')}>
               <div className="card border-0 transform-on-hover cardImgContainer">
                 <a className="lightbox" href={sponsor.url} target="_blank">
                   <img src={getImageUrl(sponsor.image)} alt={`${sponsor.name}`} className="card-img-top mobileLogo" />
@@ -43,7 +45,7 @@ const SponsorsPage = ({ data }) => {
       }>
       <div className="gallery-block">
         {sponsors.map(level => (
-          <SponsorRow {...level.node} />
+          <SponsorRow {...level.node} key={level.node.title} />
         ))}
       </div>
     </Layout>

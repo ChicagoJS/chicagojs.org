@@ -25,7 +25,7 @@ const MeetupsPage = props => {
       <div className="container">
         <div className="row">
           {meetups.map(m => (
-            <MeetupLink {...m.node} />
+            <MeetupLink key={m.node.name.replace(/\s/g, '')} {...m.node} />
           ))}
         </div>
       </div>

@@ -46,7 +46,7 @@ export default () => (
       <span className="list-inline-item mb-2">ChicagoJS {new Date().getFullYear()}</span>
       <ul className="list-unstyled list-inline mp-0">
         {FOOTER_LINKS.map(link => (
-          <li className="list-inline-item">
+          <li className="list-inline-item" key={link.title}>
             <a rel="no-follow" className="m-1" href={link.url}>
               <img width="24" height="24" src={link.image} title={`ChicagoJS on ${link.title}`} />
             </a>

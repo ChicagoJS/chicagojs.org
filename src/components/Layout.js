@@ -31,7 +31,7 @@ export default ({
     </Helmet>
     {!hideNavbar && <Navbar />}
     {!hidePageHeader && <PageHeader title={title} titleColor={titleColor} background={background} />}
-    <div style={{ marginBottom: '5rem' }}>{children}</div>
+    <div style={{ marginBottom: !hidePageHeader ? '5rem' : '0rem', paddingBottom: 0 }}>{children}</div>
     {!hideFooter && <GlobalFooter />}
   </React.Fragment>
 )

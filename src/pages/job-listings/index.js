@@ -18,7 +18,7 @@ const JobPost = ({
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
     <li className="media mb-4 p-2">
-      <img width="80" height="80" class="rounded mr-3" src={logoUrl} alt={`Logo for ${company}`} />
+      <img width="80" height="80" className="rounded mr-3" src={logoUrl} alt={`Logo for ${company}`} />
       <div className="media-body">
         <div className="d-flex flex-row justify-content-between">
           <h5 className="mt-0 mb-1">{position}</h5>
@@ -26,13 +26,22 @@ const JobPost = ({
         </div>
         <ul className="list-unstyled list-inline">
           <li className="list-inline-item font-weight-bold">
-            {' '}
             <i className="fas fa-briefcase" /> {company}
           </li>
           <li className="list-inline-item font-weight-bold">
-            {' '}
             <i className="fas fa-map-pin" /> {neighborhood}
           </li>
+        </ul>
+        <ul className="list-unstyled list-inline">
+          {technologies.map(tech => (
+            <img
+              width="20"
+              height="20"
+              className="rounded mr-3"
+              src={`../../images/Icons/${tech}.png`}
+              alt={`Logo for ${tech}`}
+            />
+          ))}
         </ul>
         {description}
       </div>
@@ -79,11 +88,15 @@ export const query = graphql`
           neighborhood
           position
           datePosted
+          technologies
           description
           logoUrl
         }
       }
     }
+  }
+  query {
+    logoImages: allFile(filter: { relativeDirectory: { eq: "Icons" } })
   }
 `
 

@@ -4,13 +4,13 @@ import get from 'lodash.get'
 import Layout from '../../components/Layout'
 import './meetup.css'
 
-const MeetupLink = ({ name, description, meetupUrl }) => (
+const MeetupLink = ({ name, description, urlname }) => (
   <div className="col-sm-6 meetup">
     <div className="card mb-4">
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">{description}</p>
-        <a href={meetupUrl} className="card-link">
+        <a href={`https://www.meetup.com/${urlname}`} className="card-link">
           Learn More
         </a>
       </div>
@@ -20,6 +20,8 @@ const MeetupLink = ({ name, description, meetupUrl }) => (
 
 const MeetupsPage = props => {
   const meetups = get(props, 'data.allLocalMeetupsJson.edges', [])
+  console.log(meetups)
+  console.log(props)
   return (
     <Layout title="Local Meetups">
       <div className="container">
@@ -40,7 +42,7 @@ export const query = graphql`
         node {
           name
           description
-          meetupUrl
+          urlname
         }
       }
     }

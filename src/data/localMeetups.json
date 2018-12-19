@@ -2,31 +2,37 @@
   {
     "name": "Chicago JavaScript Meetup Group",
     "description": "Meet other local JavaScript Developers to network, share knowledge, to review the state of the art, or to dream up new applications.",
-    "meetupUrl": "https://www.meetup.com/js-chi/"
+    "meetupUrl": "https://www.meetup.com/js-chi/",
+    "urlname": "js-chi"
   },
   {
     "name": "Chicago Node.js",
     "description": "A group to discuss Node.js, its frameworks, and best practices.",
-    "meetupUrl": "https://www.meetup.com/Chicago-Nodejs/"
+    "meetupUrl": "https://www.meetup.com/Chicago-Nodejs/",
+    "urlname": "Chicago-Nodejs"
   },
   {
     "name": "React Chicago",
     "description": "This meetup is focused on bringing everyone together who have an interest in React, React Native, and it's ecosystem.",
-    "meetupUrl": "https://www.meetup.com/React-Chicago/"
+    "meetupUrl": "https://www.meetup.com/React-Chicago/",
+    "urlname": "React-Chicago"
   },
   {
     "name": "AngularJS Chicago",
     "description": "AngularJS meetup group in Chicago, IL discussing how to leverage and evolve the 'Superheroic JavaScript MVW Framework'.",
-    "meetupUrl": "https://www.meetup.com/AngularJS-Chicago/"
+    "meetupUrl": "https://www.meetup.com/AngularJS-Chicago/",
+    "urlname": "AngularJS-Chicago"
   },
   {
     "name": "Chicago Ember.js",
     "description": "Chicago's Ember.js group is committed to creating a robust community built around the philosophy of building beautifully crafted web applications with the help of Ember.js.",
-    "meetupUrl": "https://www.meetup.com/Chicago-Ember-js/"
+    "meetupUrl": "https://www.meetup.com/Chicago-Ember-js/",
+    "urlname": "Chicago-Ember-js"
   },
   {
     "name": "Chicago ReasonML",
     "description": "A new programming language from Facebook, ReasonML combines Javascript syntax with Ocaml's AST for high quality, fast javascript.",
-    "meetupUrl": "https://www.meetup.com/Chicago-ReasonML/"
+    "meetupUrl": "https://www.meetup.com/Chicago-ReasonML/",
+    "urlname": "Chicago-ReasonML"
   }
 ]

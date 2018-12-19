@@ -1,3 +1,10 @@
+.meetup .card {
+  min-height: 240px;
+}
+.card-title {
+  /* background-color: tomato; */
+  width: 75%;
+}
 .card-text {
   font-weight: lighter;
   margin-bottom: 0.7rem;
@@ -47,14 +54,42 @@
   color: #4d4d4d;
 }
 
-@media screen and (max-width: 1000px) {
-  .category {
-    display: none;
+@media screen and (max-width: 1200px) {
+  .meetup .card {
+    min-height: 300px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .card-title {
+    /* background-color: tomato; */
+    width: 60%;
+  }
   .card-text {
     font-size: 0.95rem;
+  }
+  .meetup .card {
+    min-height: 340px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .category {
+    display: block;
+  }
+  .meetup .card {
+    min-height: 290px;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .meetup .card {
+    min-height: 375px;
   }
 }

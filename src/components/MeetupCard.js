@@ -1,7 +1,7 @@
 import React from 'react'
 import PropType from 'prop-types'
-import './MeetupCard.css'
 import fetchJsonp from 'fetch-jsonp'
+import './MeetupCard.css'
 
 class MeetupCard extends React.Component {
   _isMounted = false

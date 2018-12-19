@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash.get'
 import Layout from '../../components/Layout'
 import MeetupCard from '../../components/MeetupCard'
-import './meetup.css'
 
 const MeetupsPage = props => {
   const meetups = get(props, 'data.allLocalMeetupsJson.edges', [])

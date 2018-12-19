@@ -1,7 +1,7 @@
 import React from 'react'
 import PropType from 'prop-types'
 
-const MeetupCard = ({ name, description, urlname }) => (
+const MeetupCard = ({ name, description, urlname, category }) => (
   <div className="col-sm-6 meetup">
     <div className="card mb-4">
       <div className="card-body">
@@ -18,7 +18,8 @@ const MeetupCard = ({ name, description, urlname }) => (
 MeetupCard.propTypes = {
   name: PropType.string.isRequired,
   description: PropType.string.isRequired,
-  urlname: PropType.string.isRequired
+  urlname: PropType.string.isRequired,
+  category: PropType.string.isRequired
 }
 
 export default MeetupCard

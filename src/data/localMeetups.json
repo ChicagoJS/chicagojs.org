@@ -3,36 +3,70 @@
     "name": "Chicago JavaScript Meetup Group",
     "description": "Meet other local JavaScript Developers to network, share knowledge, to review the state of the art, or to dream up new applications.",
     "meetupUrl": "https://www.meetup.com/js-chi/",
-    "urlname": "js-chi"
+    "urlname": "js-chi",
+    "category": "general"
   },
   {
     "name": "Chicago Node.js",
     "description": "A group to discuss Node.js, its frameworks, and best practices.",
     "meetupUrl": "https://www.meetup.com/Chicago-Nodejs/",
-    "urlname": "Chicago-Nodejs"
+    "urlname": "Chicago-Nodejs",
+    "category": "backend"
   },
   {
     "name": "React Chicago",
     "description": "This meetup is focused on bringing everyone together who have an interest in React, React Native, and it's ecosystem.",
     "meetupUrl": "https://www.meetup.com/React-Chicago/",
-    "urlname": "React-Chicago"
+    "urlname": "React-Chicago",
+    "category": "frontend"
+  },
+  {
+    "name": "Chicago Vue.js",
+    "description": "We will do presentations and share knowledge about Vue.js",
+    "meetupUrl": "https://www.meetup.com/Chicago-Vue-js/",
+    "urlname": "Chicago-Vue-js",
+    "category": "frontend"
   },
   {
     "name": "AngularJS Chicago",
     "description": "AngularJS meetup group in Chicago, IL discussing how to leverage and evolve the 'Superheroic JavaScript MVW Framework'.",
     "meetupUrl": "https://www.meetup.com/AngularJS-Chicago/",
-    "urlname": "AngularJS-Chicago"
+    "urlname": "AngularJS-Chicago",
+    "category": "frontend"
   },
   {
     "name": "Chicago Ember.js",
     "description": "Chicago's Ember.js group is committed to creating a robust community built around the philosophy of building beautifully crafted web applications with the help of Ember.js.",
     "meetupUrl": "https://www.meetup.com/Chicago-Ember-js/",
-    "urlname": "Chicago-Ember-js"
+    "urlname": "Chicago-Ember-js",
+    "category": "frontend"
   },
   {
     "name": "Chicago ReasonML",
     "description": "A new programming language from Facebook, ReasonML combines Javascript syntax with Ocaml's AST for high quality, fast javascript.",
     "meetupUrl": "https://www.meetup.com/Chicago-ReasonML/",
-    "urlname": "Chicago-ReasonML"
+    "urlname": "Chicago-ReasonML",
+    "category": "general"
+  },
+  {
+    "name": "React Native Chicago",
+    "description": "Join us for React Native Chicago and help us build the React Native community here at home.",
+    "meetupUrl": "https://www.meetup.com/React-Native-Chicago/",
+    "urlname": "React-Native-Chicago",
+    "category": "mobile"
+  },
+  {
+    "name": "Chicago Elm",
+    "description": "A group for those who use or are interested in the Elm programming language",
+    "meetupUrl": "https://www.meetup.com/chicago-elm/",
+    "urlname": "chicago-elm",
+    "category": "general"
+  },
+  {
+    "name": "Chicago Flutter Meetup",
+    "description": "This is a group for anyone interested in building cross-platform mobile applications using Flutter & Dart",
+    "meetupUrl": "https://www.meetup.com/Flutter-Chicago/",
+    "urlname": "Flutter-Chicago",
+    "category": "mobile"
   }
 ]

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropType from 'prop-types'
+import './MeetupCard.css'
 
 const MeetupCard = ({ name, description, urlname, category }) => (
   <div className="col-sm-6 meetup">
@@ -10,6 +11,7 @@ const MeetupCard = ({ name, description, urlname, category }) => (
         <a href={`https://www.meetup.com/${urlname}`} className="card-link">
           Learn More
         </a>
+        <div className={`category ${category}`}>{category}</div>
       </div>
     </div>
   </div>

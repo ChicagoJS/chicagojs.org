@@ -1,5 +1,6 @@
 .card-text {
   font-weight: lighter;
+  margin-bottom: 0.7rem;
 }
 .card-link {
   position: absolute;
@@ -32,6 +33,18 @@
 }
 .mobile {
   background-color: #67fabf;
+}
+.members {
+  font-size: 0.7rem;
+  background-color: #eaeaec;
+  width: fit-content;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+  margin-bottom: 2rem;
+}
+.memberCount {
+  font-weight: bold;
+  color: #4d4d4d;
 }
 
 @media screen and (max-width: 1000px) {

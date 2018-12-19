@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, withPrefix } from 'gatsby'
 import Layout from '../../components/Layout'
 import './job-listings.css'
 
@@ -38,7 +38,7 @@ const JobPost = ({
               width="20"
               height="20"
               className="rounded mr-3"
-              src={`../../images/Icons/${tech}.png`}
+              src={withPrefix(`/tech-icons/${tech}.svg`)}
               alt={`Logo for ${tech}`}
             />
           ))}
@@ -94,9 +94,6 @@ export const query = graphql`
         }
       }
     }
-  }
-  query {
-    logoImages: allFile(filter: { relativeDirectory: { eq: "Icons" } })
   }
 `
 

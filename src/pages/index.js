@@ -16,7 +16,7 @@ const IndexPage = () => (
         <p>If you want to learn any of these technologies, please check out our issues page on Github!</p>
         <ul>
           {LANGUAGES.map(l => (
-            <li>{l}</li>
+            <li key={`lang-${l}`}>{l}</li>
           ))}
         </ul>
       </div>

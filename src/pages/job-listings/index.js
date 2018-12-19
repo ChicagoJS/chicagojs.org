@@ -3,6 +3,26 @@ import { graphql, withPrefix } from 'gatsby'
 import Layout from '../../components/Layout'
 import './job-listings.css'
 
+const renderCorrectUrl = tech => {
+  let lowerCase = tech.toLowerCase()
+  let parsedTech = ''
+  switch (lowerCase) {
+    case 'react.js':
+      parsedTech = 'react'
+      break
+    case 'react native':
+      parsedTech = 'react'
+      break
+    case 'node.js':
+      parsedTech = 'node-dot-js'
+      break
+    default:
+      parsedTech = lowerCase
+      break
+  }
+  return `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${parsedTech}.svg`
+}
+
 const JobPost = ({
   position,
   company,
@@ -38,7 +58,7 @@ const JobPost = ({
               width="20"
               height="20"
               className="rounded mr-3"
-              src={withPrefix(`/tech-icons/${tech}.svg`)}
+              src={renderCorrectUrl(tech)}
               alt={`Logo for ${tech}`}
             />
           ))}

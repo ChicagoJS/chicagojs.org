@@ -55,7 +55,7 @@ const JobPost = ({
               <i className="fas fa-map-pin" /> {neighborhood}
             </li>
           </ul>
-          <Link className="btn btn-secondary" to={`/job-post?${postID}`}>
+          <Link className="btn btn-secondary" to={`/job-post?postID=${postID}`}>
             Learn More
           </Link>
         </div>

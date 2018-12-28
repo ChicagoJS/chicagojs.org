@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from '../../components/Layout'
 import './job-listings.css'
 
@@ -44,14 +45,17 @@ const JobPost = ({
           <h5 className="mt-0 mb-1">{position}</h5>
           <span>{convertedDate}</span>
         </div>
-        <ul className="list-unstyled list-inline">
-          <li className="list-inline-item font-weight-bold">
-            <i className="fas fa-briefcase" /> {company}
-          </li>
-          <li className="list-inline-item font-weight-bold">
-            <i className="fas fa-map-pin" /> {neighborhood}
-          </li>
-        </ul>
+        <div className="d-flex flex-row justify-content-between">
+          <ul className="list-unstyled list-inline">
+            <li className="list-inline-item font-weight-bold">
+              <i className="fas fa-briefcase" /> {company}
+            </li>
+            <li className="list-inline-item font-weight-bold">
+              <i className="fas fa-map-pin" /> {neighborhood}
+            </li>
+          </ul>
+          <Link className="btn btn-secondary">Learn More</Link>
+        </div>
         <ul className="list-unstyled list-inline">
           {technologies.map(tech => (
             <img

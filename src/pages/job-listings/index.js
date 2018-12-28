@@ -25,6 +25,7 @@ const renderCorrectUrl = tech => {
 }
 
 const JobPost = ({
+  postID,
   position,
   company,
   logoUrl,
@@ -54,7 +55,9 @@ const JobPost = ({
               <i className="fas fa-map-pin" /> {neighborhood}
             </li>
           </ul>
-          <Link className="btn btn-secondary">Learn More</Link>
+          <Link className="btn btn-secondary" to={`/job-post?${postID}`}>
+            Learn More
+          </Link>
         </div>
         <ul className="list-unstyled list-inline">
           {technologies.map(tech => (
@@ -90,7 +93,7 @@ const JobListingsPage = ({ data }) => {
         </div>
         <div className={'row'}>
           <div className={'col-md-10 col-sm-2 mx-auto'}>
-            <ul class="list-unstyled">
+            <ul className="list-unstyled">
               {jobPosts.map(job => (
                 <JobPost {...job.node} />
               ))}
@@ -107,7 +110,7 @@ export const query = graphql`
     allJobListingsJson {
       edges {
         node {
-          id
+          postID
           company
           neighborhood
           position

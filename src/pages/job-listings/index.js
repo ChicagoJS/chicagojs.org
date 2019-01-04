@@ -115,9 +115,12 @@ export const query = graphql`
           neighborhood
           position
           datePosted
+<<<<<<< HEAD
           technologies
           description
           logoUrl
+=======
+>>>>>>> 4fd1af0814901ab6fcdb698aec61c63f8d6b67bd
         }
       }
     }

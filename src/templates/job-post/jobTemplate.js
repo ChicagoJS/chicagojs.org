@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import { graphql } from 'gatsby'
 import './job-post.css'
 
 const JobPostPage = ({ data }) => {
@@ -23,5 +24,24 @@ const JobPostPage = ({ data }) => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query JobPostQuery {
+    allJobListingsJson {
+      edges {
+        node {
+          postID
+          company
+          neighborhood
+          position
+          datePosted
+          technologies
+          description
+          logoUrl
+        }
+      }
+    }
+  }
+`
 
 export default JobPostPage

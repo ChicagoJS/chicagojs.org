@@ -1,11 +1,13 @@
 const path = require('path')
+const jobData = require('./src/data/jobListings.json')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const mdTemplate = path.resolve(`src/templates/mdTemplate.js`)
+  const jobTemplate = path.resolve(`src/templates/job-post/jobTemplate.js`)
 
-  return graphql(`
+  graphql(`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___title] }, limit: 1000) {
         edges {
@@ -28,6 +30,19 @@ exports.createPages = ({ actions, graphql }) => {
         component: mdTemplate,
         context: {}
       })
+    })
+  })
+
+  jobData.forEach(({ postID }) => {
+    const path = postID
+
+    createPage({
+      path,
+      component: jobTemplate,
+
+      context: {
+        path
+      }
     })
   })
 }

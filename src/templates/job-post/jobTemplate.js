@@ -29,6 +29,12 @@ const JobPostPage = ({ data }) => {
               />
             ))}
           </ul>
+          <ul className="list-unstyled list-inline">
+            <h4>Benefits:</h4>
+            {jobData.benefits.map(benefits => (
+              <span>{benefits}, </span>
+            ))}
+          </ul>
           <p>{jobData.description}</p>
           <a target="_blank" className="btn btn-primary" href={`${jobData.applyUrl}`}>
             Apply!
@@ -53,6 +59,7 @@ export const query = graphql`
           description
           logoUrl
           applyUrl
+          benefits
         }
       }
     }

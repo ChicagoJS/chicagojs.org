@@ -4,9 +4,7 @@ import { graphql } from 'gatsby'
 import './job-post.css'
 
 const JobPostPage = ({ data }) => {
-  let postID = window.location.search.split('=')
   console.log(data)
-  console.log(postID[1])
   return (
     <Layout
       title={`Platform Engineer @ Draftbit `}
@@ -16,7 +14,7 @@ const JobPostPage = ({ data }) => {
       }>
       <div className="container my-4">
         <div className="blog-post-content">
-          <h1>Test</h1>
+          <h1>{data.node.postID}</h1>
           <h2>Location</h2>
           <p>Description</p>
         </div>
@@ -26,8 +24,8 @@ const JobPostPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query JobPostQuery {
-    allJobListingsJson {
+  query JobPostQuery($postID: String) {
+    allJobListingsJson(filter: { postID: { eq: $postID } }) {
       edges {
         node {
           postID

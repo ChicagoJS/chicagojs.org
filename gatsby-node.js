@@ -34,14 +34,14 @@ exports.createPages = ({ actions, graphql }) => {
   })
 
   jobData.forEach(({ postID }) => {
-    const path = postID
+    const path = `job-post/${postID}`
 
     createPage({
       path,
       component: jobTemplate,
 
       context: {
-        path
+        postID
       }
     })
   })

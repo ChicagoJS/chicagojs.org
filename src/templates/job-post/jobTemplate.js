@@ -6,7 +6,6 @@ import './job-post.css'
 
 const JobPostPage = ({ data }) => {
   let jobData = data.allJobListingsJson.edges[0].node
-  console.log(jobData)
   return (
     <Layout
       title={`${jobData.position} @ ${jobData.company} `}
@@ -16,10 +15,10 @@ const JobPostPage = ({ data }) => {
       }>
       <div className="container my-4">
         <div className="blog-post-content">
-          <h1>Position: {jobData.position}</h1>
+          <h2>Position: {jobData.position}</h2>
           <h2>Location: {jobData.neighborhood}</h2>
           <ul className="list-unstyled list-inline">
-            <h2>Tech:</h2>
+            <h4>Tech:</h4>
             {jobData.technologies.map(tech => (
               <img
                 width="20"
@@ -30,8 +29,8 @@ const JobPostPage = ({ data }) => {
               />
             ))}
           </ul>
-          <p>Description: {jobData.description}</p>
-          <a target="_blank" className="btn btn-secondary" href={`${jobData.applyUrl}`}>
+          <p>{jobData.description}</p>
+          <a target="_blank" className="btn btn-primary" href={`${jobData.applyUrl}`}>
             Apply!
           </a>
         </div>

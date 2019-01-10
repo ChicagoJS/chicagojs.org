@@ -38,16 +38,18 @@ class MeetupCard extends React.Component {
       <div className="col-sm-6 meetup">
         <div className="card mb-4">
           <div className="card-body">
-            <h5 className="card-title">{name}</h5>
+            <h5>
+              <span>{name}</span>
+              <span className={`badge badge-pill ${category}`}>{category}</span>
+            </h5>
             <p className="card-text">{description}</p>
-            <a href={`https://www.meetup.com/${urlname}`} className="card-link">
+            <a href={`https://www.meetup.com/${urlname}`} target="_blank" className="btn btn-outline-primary">
               Learn More
             </a>
-            <div className={`category ${category}`}>{category}</div>
             {this.state.totalMembers !== 0 && (
-              <div className="members">
+              <span className="badge badge-light">
                 Total Members: <span className="memberCount">{this.state.totalMembers}</span>
-              </div>
+              </span>
             )}
           </div>
         </div>

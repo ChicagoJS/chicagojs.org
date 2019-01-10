@@ -1,36 +1,21 @@
 .meetup .card {
   min-height: 240px;
 }
-.card-title {
-  /* background-color: tomato; */
-  width: 75%;
-}
 .card-text {
   font-weight: lighter;
   margin-bottom: 0.7rem;
 }
-.card-link {
+.meetup .btn {
   position: absolute;
-  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
-  color: #4d4d4d;
-  padding: 0.5rem 1rem;
-  font-weight: lighter;
-  border: solid 1px #a6a6a6;
-  border-radius: 0.25rem;
+  font-weight: lighter !important;
   bottom: 1rem;
 }
-.category {
-  font-weight: lighter;
-  position: absolute;
-  background-color: #dfe1e5;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  top: 1rem;
-  right: 1rem;
-  width: fit-content;
-  border-radius: 1rem;
+.meetup .badge-pill {
+  font-weight: normal;
+  float: right;
+}
+.general {
+  background-color: #ebecee;
 }
 .frontend {
   background-color: #66e0ff;
@@ -41,55 +26,81 @@
 .mobile {
   background-color: #67fabf;
 }
-.members {
-  font-size: 0.7rem;
-  background-color: #eaeaec;
-  width: fit-content;
-  padding: 0.1rem 0.5rem;
-  border-radius: 0.2rem;
-  margin-bottom: 2rem;
+.meetup .badge-light {
+  background-color: #ebecee !important;
 }
 .memberCount {
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 0.75rem;
   color: #4d4d4d;
 }
 
 @media screen and (max-width: 1200px) {
   .meetup .card {
-    min-height: 300px;
+    min-height: 260px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .meetup h5 {
+    font-size: 0.88rem !important;
+  }
+  .card-text {
+    font-size: 0.88rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .card-title {
-    /* background-color: tomato; */
-    width: 60%;
+  .meetup h5 {
+    font-size: 1rem !important;
+  }
+  .meetup h5 span {
+    margin-right: 0.5rem;
   }
   .card-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+  }
+  .meetup .badge-pill {
+    float: none;
+  }
+  .meetup .badge-light {
+    font-size: 0.6rem;
+  }
+  .memberCount {
+    font-size: 0.5rem;
   }
   .meetup .card {
-    min-height: 340px;
+    min-height: 310px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .category {
-    display: block;
+  .meetup h5 {
+    font-size: 1rem !important;
+  }
+  .meetup h5 span {
+    margin-right: 0.5rem;
+  }
+  .meetup .badge-pill {
+    float: right;
+    margin-left: 0;
   }
   .meetup .card {
     min-height: 290px;
   }
-  .card-title {
-    font-size: 1.4rem;
-  }
   .card-text {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 415px) {
+  .meetup p {
+    font-size: 0.9rem !important;
+  }
+  .meetup .badge-pill {
+    float: none;
+  }
   .meetup .card {
-    min-height: 375px;
+    min-height: 275px;
   }
 }

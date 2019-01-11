@@ -61,9 +61,7 @@ class MeetupCard extends React.Component {
               <span className={`badge badge-pill ${category}`}>{category}</span>
             </h5>
             <p className="card-text">{description}</p>
-            <a href={`https://www.meetup.com/${urlname}`} target="_blank" className="btn btn-outline-primary join">
-              Join Group
-            </a>
+
             {this.state.totalMembers !== 0 && (
               <span className="badge badge-light">
                 Total Members: <span className="memberCount">{this.state.totalMembers}</span>
@@ -79,7 +77,7 @@ class MeetupCard extends React.Component {
                       <strong>Date: </strong>
                       {format(new Date(upcomingEvent.time), 'MMM DD, YYYY h:mm a')}
                     </p>
-                    <a href={upcomingEvent.link} target="_blank" className="btn btn-outline-secondary">
+                    <a href={upcomingEvent.link} target="_blank" className="btn btn-outline-secondary rsvp">
                       RSVP Event
                     </a>
                   </div>
@@ -88,6 +86,9 @@ class MeetupCard extends React.Component {
                 )}
               </div>
             </div>
+            <a href={`https://www.meetup.com/${urlname}`} target="_blank" className="btn btn-outline-primary join">
+              Join Group
+            </a>
           </div>
         </div>
       </div>

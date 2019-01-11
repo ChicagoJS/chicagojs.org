@@ -1,13 +1,12 @@
 .meetup .card {
-  min-height: 240px;
+  min-height: 450px;
 }
 .card-text {
   font-weight: lighter;
   margin-bottom: 0.7rem;
 }
-.meetup .btn {
+.join {
   position: absolute;
-  font-weight: lighter !important;
   bottom: 1rem;
 }
 .meetup .badge-pill {
@@ -34,10 +33,17 @@
   font-size: 0.75rem;
   color: #4d4d4d;
 }
+.meetup .upcoming {
+  min-height: 50px;
+  top: 1rem;
+}
 
 @media screen and (max-width: 1200px) {
   .meetup .card {
-    min-height: 260px;
+    min-height: 500px;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
   }
 }
 
@@ -54,6 +60,7 @@
   .meetup h5 {
     font-size: 1rem !important;
   }
+
   .meetup h5 span {
     margin-right: 0.5rem;
   }
@@ -70,7 +77,10 @@
     font-size: 0.5rem;
   }
   .meetup .card {
-    min-height: 310px;
+    min-height: 600px;
+  }
+  .meetup .upcoming {
+    min-height: 40px;
   }
 }
 
@@ -86,10 +96,13 @@
     margin-left: 0;
   }
   .meetup .card {
-    min-height: 290px;
+    min-height: 500px;
   }
   .card-text {
     font-size: 1rem;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
   }
 }
 
@@ -102,5 +115,8 @@
   }
   .meetup .card {
     min-height: 275px;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
   }
 }

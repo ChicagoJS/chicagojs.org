@@ -15,18 +15,18 @@ const JobPostPage = ({ data }) => {
       <div className="container my-4">
         <div className="blog-post-content">
           <h4>Tech:</h4>
-          <ul className="list-unstyled list-inline row ml-1">
+          <ul className="list-inline list-unstyled">
             {jobData.technologies.map(tech => (
-              <div className="ml-1">
+              <li className="list-inline-item mr-3">
                 <img
-                  width="20"
-                  height="20"
-                  className="rounded mr-3"
+                  width="25"
+                  height="25"
+                  className="rounded mr-2 d-inline-block"
                   src={renderTechIconCorrectUrl(tech)}
                   alt={`Logo for ${tech}`}
                 />
-                <span>{tech}</span>
-              </div>
+                <span className="d-inline-block">{tech}</span>
+              </li>
             ))}
           </ul>
           <ul className="list-unstyled list-inline">

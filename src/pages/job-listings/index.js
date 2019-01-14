@@ -36,13 +36,15 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
         <div>
           <ul className="list-unstyled list-inline-item">
             {technologies.map(tech => (
-              <img
-                width="20"
-                height="20"
-                className="rounded mr-3"
-                src={renderTechIconCorrectUrl(tech)}
-                alt={`Logo for ${tech}`}
-              />
+              <li className="list-inline-item">
+                <img
+                  width="20"
+                  height="20"
+                  className="rounded mr-2 d-inline-block"
+                  src={renderTechIconCorrectUrl(tech)}
+                  alt={`Logo for ${tech}`}
+                />
+              </li>
             ))}
           </ul>
         </div>

@@ -31,17 +31,19 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
             Learn More
           </Link>
         </div>
-        <ul className="list-unstyled list-inline">
-          {technologies.map(tech => (
-            <img
-              width="20"
-              height="20"
-              className="rounded mr-3"
-              src={renderTechIconCorrectUrl(tech)}
-              alt={`Logo for ${tech}`}
-            />
-          ))}
-        </ul>
+        <div>
+          <ul className="list-unstyled list-inline-item">
+            {technologies.map(tech => (
+              <img
+                width="20"
+                height="20"
+                className="rounded mr-3"
+                src={renderTechIconCorrectUrl(tech)}
+                alt={`Logo for ${tech}`}
+              />
+            ))}
+          </ul>
+        </div>
         {description}
       </div>
     </li>

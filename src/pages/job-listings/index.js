@@ -10,7 +10,9 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
     <li className="media mb-4 p-2">
-      <img width="80" height="80" className="rounded mr-3" src={logoUrl} alt={`Logo for ${company}`} />
+      {!logoUrl ? null : (
+        <img width="80" height="80" className="rounded mr-3" src={logoUrl} alt={`Logo for ${company}`} />
+      )}
       <div className="media-body">
         <div className="d-flex flex-row justify-content-between">
           <h5 className="mt-0 mb-1">{position}</h5>

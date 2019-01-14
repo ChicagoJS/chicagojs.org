@@ -5,18 +5,7 @@ import Layout from '../../components/Layout'
 import { renderTechIconCorrectUrl } from '../../utils/index'
 import './job-listings.css'
 
-const JobPost = ({
-  postID,
-  position,
-  company,
-  logoUrl,
-  description,
-  datePosted,
-  positionType,
-  technologies,
-  neighborhood,
-  perks
-}) => {
+const JobPost = ({ postID, position, company, logoUrl, description, datePosted, technologies, neighborhood }) => {
   let date = new Date(datePosted)
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
@@ -66,9 +55,9 @@ const JobListingsPage = ({ data }) => {
       background={
         'https://images.unsplash.com/photo-1521901581118-62fa7443883d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       }>
-      <div className={'container Job-Contianer'}>
+      <div className={'container Job-Container'}>
         <div className={'row'}>
-          <div className={'col-md-10 col-sm-2 mx-auto Job-Contianer-title'}>
+          <div className={'col-md-10 col-sm-2 mx-auto Job-Container-title'}>
             <h1>Jobs in Chicago</h1>
           </div>
         </div>

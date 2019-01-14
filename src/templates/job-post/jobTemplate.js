@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { renderTechIconCorrectUrl } from '../../utils/index'
 import './job-post.css'
 
@@ -15,18 +15,19 @@ const JobPostPage = ({ data }) => {
       }>
       <div className="container my-4">
         <div className="blog-post-content">
-          <h2>Position: {jobData.position}</h2>
-          <h2>Location: {jobData.neighborhood}</h2>
-          <ul className="list-unstyled list-inline">
-            <h4>Tech:</h4>
+          <h4>Tech:</h4>
+          <ul className="list-unstyled list-inline row ml-1">
             {jobData.technologies.map(tech => (
-              <img
-                width="20"
-                height="20"
-                className="rounded mr-3"
-                src={renderTechIconCorrectUrl(tech)}
-                alt={`Logo for ${tech}`}
-              />
+              <div className="ml-1">
+                <img
+                  width="20"
+                  height="20"
+                  className="rounded mr-3"
+                  src={renderTechIconCorrectUrl(tech)}
+                  alt={`Logo for ${tech}`}
+                />
+                <span>{tech}</span>
+              </div>
             ))}
           </ul>
           <ul className="list-unstyled list-inline">
@@ -35,6 +36,7 @@ const JobPostPage = ({ data }) => {
               <span>{benefits}, </span>
             ))}
           </ul>
+          <h4>Job Description:</h4>
           <p>{jobData.description}</p>
           <a target="_blank" className="btn btn-primary" href={`${jobData.applyUrl}`}>
             Apply!

@@ -1,9 +1,5 @@
-.Job-Container {
-  padding: 1em;
-  background-color: #ffffff;
-}
-
-.Job-Container-title {
-  border-bottom: 2px solid #d3d3d3;
-  margin-bottom: 1.2em;
+.image-container {
+  width: 80px;
+  height: 80px;
+  display: block;
 }

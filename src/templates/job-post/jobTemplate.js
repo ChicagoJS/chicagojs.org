@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import { graphql } from 'gatsby'
 import { renderTechIconCorrectUrl } from '../../utils/index'
-import './job-post.css'
 
 const JobPostPage = ({ data }) => {
   let jobData = data.allJobListingsJson.edges[0].node

@@ -9,7 +9,7 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
   let date = new Date(datePosted)
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
-    <li className="media mb-4 p-2">
+    <li className="media mb-4 p-2 border-bottom">
       {!logoUrl ? (
         <div className="image-container ml-3" />
       ) : (
@@ -34,7 +34,7 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
           </Link>
         </div>
         <div>
-          <ul className="list-unstyled list-inline-item">
+          <ul className="list-unstyled list-inline-item mb-2">
             {technologies.map(tech => (
               <li className="list-inline-item">
                 <img

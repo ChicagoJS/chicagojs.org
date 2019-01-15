@@ -18,6 +18,10 @@ const navLinks = [
   {
     href: '/sponsors',
     label: 'Sponsors'
+  },
+  {
+    href: '/job-listings',
+    label: 'Job Listings'
   }
 ]
 

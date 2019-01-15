@@ -1,14 +1,29 @@
 [
   {
-    "logoUrl": "https://draftbit.com/logo.svg",
+    "postID": "1234ABCD",
+    "logoUrl": "https://images.unsplash.com/photo-1544434568-2534a316a730?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
     "applyUrl": "https://draftbit.com/apply",
     "address": "343 W Erie #310 Chicago, IL 60654",
     "featured": true,
     "position": "Platform Engineer",
-    "company": "Drafbit",
+    "company": "Draftbit",
     "datePosted": "2018-12-03T15:18:31.433Z",
     "neighborhood": "River North",
-    "technologies": ["Javascript", "Node.js", "React.js", "React Native"],
+    "technologies": ["Javascript", "Node.js", "React.js", "React Native", "Ruby", "GraphQL"],
+    "benefits": ["Health Insurance", "401k", "Unlimited Vacation Policy", "Dental Insurance"],
+    "description": "Lorem ipsum dolor sit amet, cu vim discere minimum, meliore graecis consulatu ius id, in autem periculis est. Et qui primis eirmod consequat, ad vis vidisse veritus gloriatur. Sumo magna dignissim pro id, usu no erat contentiones. Ne per porro scaevola euripidis, te mandamus accommodare sit."
+  },
+  {
+    "postID": "5678EFGH",
+    "logoUrl": "",
+    "applyUrl": "https://draftbit.com/apply",
+    "address": "343 W Erie #310 Chicago, IL 60654",
+    "featured": true,
+    "position": "Platform Engineer",
+    "company": "Draftbit",
+    "datePosted": "2018-12-03T15:18:31.433Z",
+    "neighborhood": "River North",
+    "technologies": ["Javascript", "Node.js", "React.js", "Gatsby"],
     "benefits": ["Health Insurance", "401k", "Unlimited Vacation Policy", "Dental Insurance"],
     "description": "Draftbit is hiring"
   }

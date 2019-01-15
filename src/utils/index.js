@@ -16,3 +16,23 @@ export const getCloudinaryImage = (name, options) => {
 export const isValidUrl = url => {
   return urlRegex().test(url)
 }
+
+export const renderTechIconCorrectUrl = tech => {
+  let lowerCase = tech.toLowerCase()
+  let parsedTech = ''
+  switch (lowerCase) {
+    case 'react.js':
+      parsedTech = 'react'
+      break
+    case 'react native':
+      parsedTech = 'react'
+      break
+    case 'node.js':
+      parsedTech = 'node-dot-js'
+      break
+    default:
+      parsedTech = lowerCase
+      break
+  }
+  return `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${parsedTech}.svg`
+}

@@ -14,6 +14,7 @@ export default ({
   title,
   titleColor,
   background,
+  bodyBackground = null,
   hideNavbar = false,
   hideFooter = false,
   hidePageHeader = false,
@@ -29,6 +30,12 @@ export default ({
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossOrigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous"
       />
       <link rel="icon" type="image/png" href={favicon32} sizes="32x32" />
       <link rel="icon" type="image/png" href={favicon16} sizes="16x16" />
@@ -53,7 +60,11 @@ export default ({
     </Helmet>
     {!hideNavbar && <Navbar />}
     {!hidePageHeader && <PageHeader title={title} titleColor={titleColor} background={background} />}
-    <div style={{ marginBottom: !hidePageHeader ? '5rem' : '0rem', paddingBottom: 0 }}>{children}</div>
+    <div className={'bodyBackground'} style={{ background: `url(${bodyBackground})` }}>
+      {children}
+    </div>
     {!hideFooter && <GlobalFooter />}
   </React.Fragment>
 )
+
+// style={{background: 'url(../assets/img/shattered-island.gif',backgroundSize: 'cover'}}

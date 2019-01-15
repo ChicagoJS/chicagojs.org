@@ -3,9 +3,11 @@ import './PageHeader.css'
 import PropType from 'prop-types'
 import { isValidUrl } from '../utils'
 
-const PageHeader = ({ background, title, titleColor }) => {
+const PageHeader = ({ background, title, titleColor, gradient }) => {
   const generateBackground = background => ({
-    background: isValidUrl(background) ? `url(${background})` : background
+    background: isValidUrl(background)
+      ? `linear-gradient(to right bottom, ${gradient[0]}, ${gradient[1]}), url(${background})`
+      : background
   })
 
   return (
@@ -24,12 +26,14 @@ const PageHeader = ({ background, title, titleColor }) => {
 PageHeader.propTypes = {
   background: PropType.string,
   titleColor: PropType.string,
-  title: PropType.string.isRequired
+  title: PropType.string.isRequired,
+  gradient: PropType.array
 }
 
 PageHeader.defaultProps = {
   background: '#ffffff',
   titleColor: '#000000',
-  title: 'Default Title'
+  title: 'Default Title',
+  gradient: ['rgba(0,0,0,.4)', 'rgba(0,0,0,.4)']
 }
 export default PageHeader

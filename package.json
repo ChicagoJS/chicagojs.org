@@ -12,6 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.8",
     "gatsby-remark-images": "^2.0.4",
+    "gatsby-source-airtable": "^2.0.3",
     "gatsby-source-filesystem": "^2.0.5",
     "gatsby-transformer-json": "^2.1.4",
     "gatsby-transformer-remark": "^2.1.9",
@@ -21,6 +22,8 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",
+    "remark-html": "^9.0.0",
+    "unified": "^7.1.0",
     "url-regex": "^4.1.1"
   },
   "keywords": [

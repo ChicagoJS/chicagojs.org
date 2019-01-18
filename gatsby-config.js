@@ -5,6 +5,16 @@ module.exports = {
     title: 'ChicagoJS'
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: 'YkeyR9VE3dbkxbTw1f',
+        baseId: 'appeHKtu4YMHmwLg2',
+        tableName: 'CMS',
+        tableView: 'published',
+        queryName: ''
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

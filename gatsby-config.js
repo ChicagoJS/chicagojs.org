@@ -8,11 +8,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-airtable',
       options: {
-        apiKey: 'YkeyR9VE3dbkxbTw1f',
+        apiKey: 'keyR9VE3dbkxbTw1f',
         baseId: 'appeHKtu4YMHmwLg2',
-        tableName: 'CMS',
-        tableView: 'published',
-        queryName: ''
+        tables: [
+          {
+            baseId: `appeHKtu4YMHmwLg2`,
+            tableName: `Test`
+          }
+        ]
       }
     },
     'gatsby-plugin-react-helmet',

@@ -40,7 +40,7 @@ export default ({
       <link rel="icon" type="image/png" href={favicon32} sizes="32x32" />
       <link rel="icon" type="image/png" href={favicon16} sizes="16x16" />
       <link rel="shortcut icon" type="image/x-icon" href={faviconICO} />
-      <script
+      {/* <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossOrigin="anonymous"
@@ -54,7 +54,7 @@ export default ({
         src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossOrigin="anonymous"
-      />
+      /> */}
       <meta name="description" content="Uniting Chicago's JavaScript Community" />
       <title>{title}</title>
     </Helmet>

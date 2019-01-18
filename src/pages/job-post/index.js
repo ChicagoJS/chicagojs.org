@@ -10,7 +10,6 @@ const JobPostPage = ({ data }) => {
     jobData => jobData.node && jobData.node.data && jobData.node.data.postID === postID[1]
   )
   let jobData = grabData.node.data
-  console.log(jobData)
   return (
     <Layout
       title={`${jobData.position} @ ${jobData.company} `}

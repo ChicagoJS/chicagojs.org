@@ -29,7 +29,7 @@ const JobPost = ({ postID, position, company, logoUrl, jobDescription, datePoste
               <i className="fas fa-map-pin" /> {neighborhood}
             </li>
           </ul>
-          <Link className="btn btn-secondary" to={`/job-post/${postID}`}>
+          <Link className="btn btn-secondary" to={`/job-post/?postId=${postID}`}>
             Learn More
           </Link>
         </div>
@@ -56,7 +56,6 @@ const JobPost = ({ postID, position, company, logoUrl, jobDescription, datePoste
 
 const JobListingsPage = ({ data }) => {
   let jobPosts = data.allAirtable.edges
-  console.log(jobPosts)
   return (
     <Layout
       title="Jobs in Chicago"

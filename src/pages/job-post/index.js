@@ -4,7 +4,13 @@ import { graphql } from 'gatsby'
 import { renderTechIconCorrectUrl } from '../../utils/index'
 
 const JobPostPage = ({ data }) => {
-  let jobData = data.allJobListingsJson.edges[0].node
+  let postID = window.location.search.split('=')
+  let jobDataArray = data.allAirtable.edges
+  let grabData = jobDataArray.find(
+    jobData => jobData.node && jobData.node.data && jobData.node.data.postID === postID[1]
+  )
+  let jobData = grabData.node.data
+  console.log(jobData)
   return (
     <Layout
       title={`${jobData.position} @ ${jobData.company} `}
@@ -36,7 +42,7 @@ const JobPostPage = ({ data }) => {
             ))}
           </ul>
           <h4>Job Description:</h4>
-          <p>{jobData.description}</p>
+          <p>{jobData.jobDescription}</p>
           <a target="_blank" className="btn btn-primary" href={`${jobData.applyUrl}`}>
             Apply!
           </a>
@@ -47,20 +53,21 @@ const JobPostPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query JobPostQuery($postID: String) {
-    allJobListingsJson(filter: { postID: { eq: $postID } }) {
+  query allJobListingsAirTable {
+    allAirtable {
       edges {
         node {
-          postID
-          company
-          neighborhood
-          position
-          datePosted
-          technologies
-          description
-          logoUrl
-          applyUrl
-          benefits
+          data {
+            jobDescription
+            postID
+            company
+            neighborhood
+            position
+            datePosted
+            technologies
+            logoUrl
+            benefits
+          }
         }
       }
     }

@@ -11,6 +11,7 @@ const SpeakingPage = () => {
         onmousewheel=""
         width="100%"
         height="533"
+        style={{ background: 'transparent' }}
       />
     </Layout>
   )

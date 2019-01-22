@@ -22,6 +22,10 @@ const navLinks = [
   {
     href: '/job-listings',
     label: 'Job Listings'
+  },
+  {
+    href: '/speaking',
+    label: 'Speak at an Event'
   }
 ]
 

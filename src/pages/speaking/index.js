@@ -10,8 +10,7 @@ const SpeakingPage = () => {
         frameBorder="0"
         onmousewheel=""
         width="100%"
-        height="533"
-        style={{ background: 'transparent' }}
+        style={{ background: 'transparent', height: '100vh', marginBottom: '0', paddingBottom: '0' }}
       />
     </Layout>
   )

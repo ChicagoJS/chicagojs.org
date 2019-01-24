@@ -18,3 +18,4 @@ static/admin/*.bundle.*
 .DS_Store
 .directory
 Thumbs.db
+.env

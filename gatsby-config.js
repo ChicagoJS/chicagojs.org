@@ -1,5 +1,7 @@
 'use strict'
 
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'ChicagoJS'
@@ -8,11 +10,11 @@ module.exports = {
     {
       resolve: 'gatsby-source-airtable',
       options: {
-        apiKey: 'keyR9VE3dbkxbTw1f',
-        baseId: 'appeHKtu4YMHmwLg2',
+        apiKey: `${process.env.AIRTABLE_API_KEY}`,
+        baseId: `${process.env.baseIDForJobPosts}`,
         tables: [
           {
-            baseId: `appeHKtu4YMHmwLg2`,
+            baseId: `${process.env.baseIDForJobPosts}`,
             tableName: `Test`
           }
         ]

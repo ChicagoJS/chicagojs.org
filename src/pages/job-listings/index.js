@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import { renderTechIconCorrectUrl } from '../../utils/index'
 import './job-listings.css'
 
-const JobPost = ({ postID, position, company, logoUrl, description, datePosted, technologies, neighborhood }) => {
+const JobPost = ({ postID, position, company, logoUrl, jobDescription, datePosted, technologies, neighborhood }) => {
   let date = new Date(datePosted)
   let convertedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear()
   return (
@@ -29,7 +29,7 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
               <i className="fas fa-map-pin" /> {neighborhood}
             </li>
           </ul>
-          <Link className="btn btn-secondary" to={`/job-post/${postID}`}>
+          <Link className="btn btn-secondary" to={`/job-post/?postId=${postID}`}>
             Learn More
           </Link>
         </div>
@@ -48,14 +48,14 @@ const JobPost = ({ postID, position, company, logoUrl, description, datePosted, 
             ))}
           </ul>
         </div>
-        {description}
+        {jobDescription}
       </div>
     </li>
   )
 }
 
 const JobListingsPage = ({ data }) => {
-  let jobPosts = data.allJobListingsJson.edges
+  let jobPosts = data.allAirtable.edges
   return (
     <Layout
       title="Jobs in Chicago"
@@ -67,7 +67,7 @@ const JobListingsPage = ({ data }) => {
         <div className={'col-md-10 col-sm-2 mx-auto'}>
           <ul className="list-unstyled">
             {jobPosts.map(job => (
-              <JobPost {...job.node} />
+              <JobPost {...job.node.data} />
             ))}
           </ul>
         </div>
@@ -78,17 +78,19 @@ const JobListingsPage = ({ data }) => {
 
 export const query = graphql`
   query JobListingsQuery {
-    allJobListingsJson {
+    allAirtable {
       edges {
         node {
-          postID
-          company
-          neighborhood
-          position
-          datePosted
-          technologies
-          description
-          logoUrl
+          data {
+            jobDescription
+            postID
+            company
+            neighborhood
+            position
+            datePosted
+            technologies
+            logoUrl
+          }
         }
       }
     }

@@ -10,30 +10,33 @@ const PageHeader = ({ background, title, titleColor, gradient }) => {
       : background
   })
 
-  return (
-    <div className="jumbotron jumbotron-fluid PageHeaderBackground" style={generateBackground(background)}>
-      <div className="container">
-        <div className="text-center">
-          <h1 className="PageHeader" style={{ color: titleColor }}>
-            {title}
-          </h1>
+  if (!title) {
+    return null
+  } else {
+    return (
+      <div className="jumbotron jumbotron-fluid PageHeaderBackground" style={generateBackground(background)}>
+        <div className="container">
+          <div className="text-center">
+            <h1 className="PageHeader" style={{ color: titleColor }}>
+              {title}
+            </h1>
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 PageHeader.propTypes = {
   background: PropType.string,
   titleColor: PropType.string,
-  title: PropType.string.isRequired,
+  title: PropType.string,
   gradient: PropType.array
 }
 
 PageHeader.defaultProps = {
   background: '#ffffff',
   titleColor: '#000000',
-  title: 'Default Title',
   gradient: ['rgba(0,0,0,.4)', 'rgba(0,0,0,.4)']
 }
 export default PageHeader

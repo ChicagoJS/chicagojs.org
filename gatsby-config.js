@@ -1,10 +1,25 @@
 'use strict'
 
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'ChicagoJS'
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: `${process.env.AIRTABLE_API_KEY}`,
+        baseId: `${process.env.baseIDForJobPosts}`,
+        tables: [
+          {
+            baseId: `${process.env.baseIDForJobPosts}`,
+            tableName: `Test`
+          }
+        ]
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

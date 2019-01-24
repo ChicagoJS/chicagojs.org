@@ -1,11 +1,9 @@
 const path = require('path')
-const jobData = require('./src/data/jobListings.json')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const mdTemplate = path.resolve(`src/templates/mdTemplate.js`)
-  const jobTemplate = path.resolve(`src/templates/job-post/jobTemplate.js`)
 
   graphql(`
     {
@@ -30,19 +28,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: mdTemplate,
         context: {}
       })
-    })
-  })
-
-  jobData.forEach(({ postID }) => {
-    const path = `job-post/${postID}`
-
-    createPage({
-      path,
-      component: jobTemplate,
-
-      context: {
-        postID
-      }
     })
   })
 }

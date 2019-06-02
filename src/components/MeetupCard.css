@@ -1,0 +1,145 @@
+.meetup .card {
+  min-height: 450px;
+}
+.card-text {
+  font-weight: lighter;
+  height: 4rem;
+}
+.join {
+  position: absolute;
+  bottom: 1rem;
+}
+.rsvp {
+  position: absolute;
+  bottom: 1rem;
+}
+.meetup .badge-pill {
+  font-weight: normal;
+  float: right;
+}
+.general {
+  background-color: #ebecee;
+}
+.frontend {
+  background-color: #66e0ff;
+}
+.backend {
+  background-color: #ff808a;
+}
+.mobile {
+  background-color: #67fabf;
+}
+.meetup .badge-light {
+  background-color: #ebecee !important;
+}
+.memberCount {
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: #4d4d4d;
+}
+.meetup .upcoming {
+  margin-top: 1rem;
+  min-height: 20px !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .card-text {
+    height: 5rem;
+  }
+  .meetup .card {
+    min-height: 500px;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card-text {
+    height: 5.5rem;
+  }
+  .meetup h5 {
+    font-size: 0.88rem !important;
+  }
+  .card-text {
+    font-size: 0.88rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-text {
+    height: 8rem;
+  }
+  .meetup h5 {
+    font-size: 1rem !important;
+  }
+
+  .meetup h5 span {
+    margin-right: 0.5rem;
+  }
+  .card-text {
+    font-size: 0.85rem;
+  }
+  .meetup .badge-pill {
+    float: none;
+  }
+  .meetup .badge-light {
+    font-size: 0.6rem;
+  }
+  .memberCount {
+    font-size: 0.5rem;
+  }
+  .meetup .card {
+    min-height: 650px;
+  }
+  .meetup .upcoming {
+    min-height: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card-text {
+    height: 5rem;
+  }
+  .meetup h5 {
+    font-size: 1rem !important;
+  }
+  .meetup h5 span {
+    margin-right: 0.5rem;
+  }
+  .meetup .badge-pill {
+    float: right;
+    margin-left: 0;
+  }
+  .meetup .card {
+    min-height: 500px;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .card-text {
+    height: 7rem;
+  }
+  .meetup p {
+    font-size: 0.9rem !important;
+  }
+  .meetup .badge-pill {
+    float: none;
+  }
+  .meetup .card {
+    min-height: auto;
+  }
+  .meetup .upcoming {
+    min-height: 50px;
+  }
+  .join {
+    position: relative;
+    margin-top: 2rem;
+  }
+}

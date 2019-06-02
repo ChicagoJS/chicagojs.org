@@ -9,6 +9,7 @@ static/admin/*.bundle.*
 
 # Editors
 /.idea
+/.vscode
 *.swp
 *.swo
 *.kate-swp

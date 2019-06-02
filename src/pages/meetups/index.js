@@ -2,21 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash.get'
 import Layout from '../../components/Layout'
-import './meetup.css'
-
-const MeetupLink = ({ name, description, meetupUrl }) => (
-  <div className="col-sm-6 meetup">
-    <div className="card mb-4">
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
-        <p className="card-text">{description}</p>
-        <a href={meetupUrl} className="card-link">
-          Learn More
-        </a>
-      </div>
-    </div>
-  </div>
-)
+import MeetupCard from '../../components/MeetupCard'
 
 const MeetupsPage = props => {
   const meetups = get(props, 'data.allLocalMeetupsJson.edges', [])
@@ -25,7 +11,7 @@ const MeetupsPage = props => {
       <div className="container">
         <div className="row">
           {meetups.map(m => (
-            <MeetupLink key={m.node.name.replace(/\s/g, '')} {...m.node} />
+            <MeetupCard key={m.node.name.replace(/\s/g, '')} {...m.node} />
           ))}
         </div>
       </div>
@@ -40,7 +26,8 @@ export const query = graphql`
         node {
           name
           description
-          meetupUrl
+          urlname
+          category
         }
       }
     }

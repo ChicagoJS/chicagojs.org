@@ -16,3 +16,19 @@
 .index-page-body a:hover {
   color: RGB(253, 29, 0);
 }
+
+.index-page-body .jscampcontainer {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.index-page-body .headline {
+  margin-top: 20px;
+}

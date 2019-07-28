@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import './IndexPage.css'
-import { checkPropTypes } from 'prop-types'
 import jscamplogo from '../images/jscamplogo.svg'
 import PropTypes from 'prop-types'
 

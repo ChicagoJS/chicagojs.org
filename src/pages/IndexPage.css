@@ -32,3 +32,7 @@
 .index-page-body .headline {
   margin-top: 20px;
 }
+
+.index-page-body .headline a {
+  color: #76cbe4;
+}

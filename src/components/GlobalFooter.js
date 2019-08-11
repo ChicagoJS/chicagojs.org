@@ -8,6 +8,8 @@ import svgSlack from '../images/slack.svg'
 import svgLinkedIn from '../images/linkedin.svg'
 import svgFacebook from '../images/facebook.svg'
 
+import EmailForm from './EmailForm.js'
+
 const FOOTER_LINKS = [
   {
     title: 'Mail',
@@ -26,6 +28,7 @@ const FOOTER_LINKS = [
   },
   {
     title: 'Slack',
+    //url: 'https://chicagojs.slack.com',
     image: svgSlack
   },
   {
@@ -42,7 +45,7 @@ const FOOTER_LINKS = [
 
 export default () => (
   <footer className="GlobalFooter">
-    <div className="container text-center">
+    <div className="text-center footer-left">
       <span className="list-inline-item mb-2">ChicagoJS {new Date().getFullYear()}</span>
       <ul className="list-unstyled list-inline mp-0">
         {FOOTER_LINKS.map(link => (
@@ -53,6 +56,9 @@ export default () => (
           </li>
         ))}
       </ul>
+    </div>
+    <div className="text-center footer-right">
+      <EmailForm />
     </div>
   </footer>
 )

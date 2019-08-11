@@ -66,7 +66,7 @@ const JobListingsPage = ({ data }) => {
       <div className={'row'}>
         <div className={'col-md-10 col-sm-2 mx-auto'}>
           <ul className="list-unstyled">
-            {jobPosts.map((job, i) => (
+            {jobPosts.map(job => (
               <JobPost {...job.node} />
             ))}
           </ul>

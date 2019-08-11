@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import Layout from '../../components/Layout'
 import { renderTechIconCorrectUrl } from '../../utils/index'
 import './job-listings.css'
-import JobListing from '../../components/JobListing'
 
 const JobPost = ({ postID, position, company, logoUrl, description, datePosted, technologies, neighborhood }) => {
   let date = new Date(datePosted)
@@ -68,7 +67,7 @@ const JobListingsPage = ({ data }) => {
         <div className={'col-md-10 col-sm-2 mx-auto'}>
           <ul className="list-unstyled">
             {jobPosts.map((job, i) => (
-              <JobListing key={i} name="DYLAN" /> // iterate over the components and render them, use the index as the key || BEFORE: <JobPost {...job.node} />
+              <JobPost {...job.node} />
             ))}
           </ul>
         </div>

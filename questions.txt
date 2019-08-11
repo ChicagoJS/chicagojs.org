@@ -1,4 +1,0 @@
-Notes:
-
-- When loading site on 'npm run develop' the site crashes with a TypeError
-- State is generated through API calls or user actions, props are passed in as sort of like static data

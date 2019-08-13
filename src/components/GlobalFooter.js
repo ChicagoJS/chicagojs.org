@@ -28,7 +28,7 @@ const FOOTER_LINKS = [
   },
   {
     title: 'Slack',
-    //url: 'https://chicagojs.slack.com',
+    url: 'https://chicagojs.slack.com',
     image: svgSlack
   },
   {

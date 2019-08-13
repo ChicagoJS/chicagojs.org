@@ -8,22 +8,20 @@ export default class EmailForm extends React.Component {
   }
 
   _handleSubmit = e => {
-    e.preventDefault() // prevent the page from refreshing
+    e.preventDefault()
     const { email } = this.state
-    addToMailchimp(email) // listFields are optional if you are only capturing the email address.
-      .then(data => {
-        if (data.result == 'error') {
-          if (data.msg.includes('already subscribed')) {
-            // mailchimp gives an annoying response in this case, so provide custom response
-            alert('Already subscribed to the mailing list!')
-          } else {
-            alert(data.msg)
-          }
+    addToMailchimp(email).then(data => {
+      if (data.result == 'error') {
+        if (data.msg.includes('already subscribed')) {
+          alert('Already subscribed to the mailing list!')
         } else {
-          alert('Successfully added to the mailing list!')
-          this.setState({ email: '' }) // reset to empty string on successful register
+          alert(data.msg)
         }
-      })
+      } else {
+        alert('Successfully added to the mailing list!')
+        this.setState({ email: '' })
+      }
+    })
   }
 
   render() {
@@ -31,16 +29,18 @@ export default class EmailForm extends React.Component {
       <form className="email-form" onSubmit={e => this._handleSubmit(e)}>
         <span className="list-inline-item mb-2"> Join our mailing list! </span>
         <div>
-          <label>
+          <label className="email-form-input">
             <input
-              className="email-text-box"
+              className="form-control"
               type="email"
               placeholder="Enter your email address"
               value={this.state.email}
               onChange={e => this.setState({ email: e.target.value })}
             />
           </label>
-          <input type="submit" value="Submit" />
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </div>
       </form>
     )

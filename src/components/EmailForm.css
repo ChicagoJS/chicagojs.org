@@ -1,5 +1,6 @@
 .email-form-input {
   margin-right: 8px;
+  min-width: 210px;
 }
 
 .form-control {

@@ -1,0 +1,10 @@
+.email-form-input {
+  margin-right: 8px;
+  min-width: 210px;
+}
+
+.form-control {
+  display: inline-block !important;
+  width: auto;
+  vertical-align: middle;
+}

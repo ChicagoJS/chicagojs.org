@@ -16,7 +16,7 @@
     "gatsby-remark-images": "^2.0.4",
     "gatsby-source-filesystem": "^2.0.5",
     "gatsby-transformer-json": "^2.1.4",
-    "gatsby-transformer-remark": "^2.1.9",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.5",
     "lodash.get": "^4.4.2",
     "netlify-cms": "^2.1.3",
